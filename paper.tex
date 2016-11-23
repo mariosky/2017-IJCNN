@@ -78,20 +78,24 @@ Learning a programming language is a hard thing to do. %Teaching or learning?
 
 % no keywords
 
-\section{Introduction} 
+\section{Introduction}
+
 Introductory programming courses are
 generally regarded as difficult \cite{robins2003learning,lahtinen2005study} 
 and there is a common conception that they often have a high
-failure rate \cite{bennedsen2007failure}. There are multiple factors involved.
-Jenkins \cite{jenkins2001motivation} argues that some are deeply related with the expectations,
+failure rate \cite{bennedsen2007failure}. There are multiple factors
+involved in this lack of success.
+Jenkins \cite{jenkins2001motivation} argues that there is a deep  relation with the expectations,
 attitudes, and previous experiences of the teaching staff and students. Another
 factor is the nature of the subject that involves the learning of new abstract
-constructs, syntax and tools. Also groups are often heterogeneous and thus it is
+constructs, syntax and tools. % Same guy here? - JJ
+Also groups are often heterogeneous and thus it is
 difficult to design courses that are beneficial for everyone. Many students
-begin to program when they are at their first year of university and until then
-are confronted with a totally new topic that does not respond to their habitual
-study approaches. Dijkstra \cite{dijkstra1989cruelty} argues that the subject of programming is very
-problem-solving intensive, and it requires high precision because even the
+begin to program when they are at their first year of university which
+means they are tackling a totally new topic that does not respond to their habitual
+study approaches. % same reference? You should itemize the claims - JJ
+On the other hand, Dijkstra \cite{dijkstra1989cruelty} argues that the subject of programming is very
+problem-solving intensive, which means that a  high precision is required because even the
 slightest perturbation can render a program totally worthless. These
 difficulties often frustrate students. 
 Jenkins \cite{jenkins2001motivation,jenkins2002difficulty} notes that many
@@ -108,7 +112,7 @@ and the outcome; for instance, in e-learning  \cite{kort2001affective,rossin2009
 and in programming  \cite{rodrigo2009affective,jenkins2001motivation,
 bosch2013emotions,khan2007mood}.
 
-It is expected that flow/engagement is the ideal affective state in which
+So it is expected that flow/engagement is the ideal affective state in which
 students tend to be most capable of acquiring meaningful information through the
 learning process. Flow is defined by Csikszentmihalyi \cite{csikszentmihalyi1990flow}
 as a mental state in which a person performing an activity is fully immersed in a feeling of
@@ -137,9 +141,15 @@ intrusive or invasive, and can disrupt the student’s learning experience
 Other sensors such as video cameras can also be considered invasive, since they always transmit the
 identity, appearance and behaviour along with emotional data \cite{picard2001toward}.
 
+%But the problem is how to recognize this state so that it can be used
+%to (select appropriate content| give grades| whatever ) - JJ
 In this work, a method for the recognition of affective states through keystroke
 and mouse dynamics is proposed. The hypothesis is that students vary the dynamic
-of keystrokes according to their affective state when programming.  The method
+of keystrokes according to their affective state when programming. 
+% since Bosch or whatever has already proved that this is possible (or
+% whatever) --> Establish the state of the art and how you plan to
+% advance from it - JJ
+ The method
 has three main components: a Javascript library to capture keyboard and mouse
 dynamics from a browser-based editor, a pre-processing step whose output is a
 feature vector that is sent to the third component, a classification algorithm.
@@ -168,16 +178,18 @@ activity when learning programming. In study by Lahtinen, Ala-Mutka \& Järvinen
 \cite{lahtinen2005study} is reported that students rated ``working alone on programming
 coursework'' as a more useful situation than lectures.
 
-The structure of this work is organized as follows: Section Related Work
+The structure of this work is organized as follows: next Section 
 presents a series of works related to the proposed method in this paper; Section
-Proposed Method describes the proposed method for the recognition of affective
+\ref{sec:method} describes the proposed method for the recognition of affective
 states in a web based learning environment for the teaching of programming
-languages; Section Experiment explains the experimental evaluation of the
-proposed method, following by a Results sections and finally, a Conclusion and
-Future Work are discussed.
+languages; next in Section \ref{sec:exp} we explain the experimental evaluation of the
+proposed method. % There is no results section so far
+Finally, we draw some conclusions about our methodology and
+experimients. 
 
 
-\section{Related Work} 
+\section{Related Work}
+
 Affect recognition is an active field of research. Many
 methods have been proposed, some require the intervention of the user to fill up
 questionnaires or forms; these selections remain static until the user changes
@@ -199,7 +211,7 @@ recognition. The work of Kapoor y Picard \cite{kapoor2005multimodal} uses a mult
 approach using sensory information from facial expressions and postural shifts
 of the learner combined with information about the learner's activity on the
 computer; the learning activity was solving a puzzle on a computer. They report
-using multimodal Gaussian Process approach achieving an accuracy of over 86\%.
+using a multimodal Gaussian Process approach achieving an accuracy of over 86\%.
 Sidney, et al., \cite{sidney2005integrating} enhances the intelligent tutor system AutoTutor with
 affective recognition using nonintrusive sensory information from facial
 expressions, gross body movements, and conversational cues from logs.  The
@@ -316,7 +328,9 @@ method based on fuzzy models for the recognition of emotions through KD, MD and
 touch-screen interactions. For a broad review of emotion recognition methods
 based on KD and MD, the work by Kolakowska \cite{kolakowska2013review} is recommended.
 
-\section{Proposed Method} 
+\section{Proposed Method}
+\label{sec:method}
+
 The goal of this work is to propose an affective
 recognition method based on the sensory data provided by the keyboard and mouse
 dynamics generated by a learner as he/she types a programing exercise. The main
@@ -419,7 +433,7 @@ side image of Figure \ref{fig_editor}. In this example the learner was asked to 
 function to add two numbers, in Python. The source code for the Protoboard web
 based learning environment including the KD and MD functions are open source and
 available as Github repositories at http://git.io/vJlUV also the code for the
-sandbox is in http://git.io/vJlUj.
+sandbox is in http://git.io/vJlUj. % Anonimyze this, I guess - JJ
 
 \begin{figure}[!t] 
 \centering 
@@ -462,7 +476,7 @@ calculated from the delays between the events of the digraphs and trigraphs in
 each program.
 
 
-To calculate the average and standard deviations of these presses, the delays
+To calculate the average and standard deviations of these key presses, the delays
 between a key-down and a key-up event of the left button clicks are used. In
 addition to these averages and standard deviations of the delays between
 keystrokes and mouse button presses, the average and standard deviations of the
@@ -480,7 +494,7 @@ a student required before successfully solving an exercise. This number of
 attempts is also included in the feature vector. The final feature vector
 consists of 39 features; these are based on the work of Epp, Lippold \& Mandryk
 \cite{epp2011identifying} and are shown in Table 1. (The code used for this step is available at:
-https://github.com/amherag/keyboard-mouse-dynamics).
+https://github.com/amherag/keyboard-mouse-dynamics). %anonymize
 
 Once feature vectors are obtained from an experiment, the generated dataset is
 normally used as training data for a classifier. Researchers of affective
@@ -492,7 +506,8 @@ rational data (J-48). Details for these algorithms, can be found in the textbook
 by Tan, Steinbach, \& Kumar \cite{tan2006introduction}. The accuracies obtained by these algorithms
 as well as the parameters used are reported in the next section.
 
-\section{Experiment} 
+\section{Experiment}
+\label{sec:exp}
 The aim of this research is to evaluate the use of keyboard
 and mouse dynamics as an appropriate sensory input for an affective recognition
 system. The context of use is a learning environment for programmers. In
