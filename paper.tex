@@ -71,7 +71,32 @@ Fax: (888) 555--1212}}
 
 \maketitle
 \begin{abstract} 
-Learning a programming language is a hard thing to do. %Teaching or learning?
+
+Learning to program is often regarded as a difficult task, courses are 
+problem-solving intensive and often students feel frustrated when doing programming
+exercises. Instructors aim to design learning activities that result
+challenging to students, but not to the extreme as to frustrate them. When
+selecting an appropiate programing excercise, experienced instructors gauge a
+student’s affective state and skills to then assign an activity with the  appropriate level
+of difficulty. This work is focused on the prediction of the affective states
+of programmers with different levels of expertise when learning a new
+programming language. For this, an interactive web-based programming platform
+is proposed. The platform is designed to collect data from the students'
+interaction for data analysis. Current work is focused on the prediction of
+affective states using non-obtrusive sensors. Specifically, the proposed method uses data
+gathered from both keyboard and mouse dynamics. The data set was generated
+as students learned the basics of Python programming. Feature vectors 
+were generated with 39 features representing the dynamics of the interaction. 
+In total 149 feature vectors were generated and used as input of four different
+classification algorithms: Naïve Bayes, J-48, k-NN, and Artificial Neural
+Networks. These classification models are then compared by their performances
+when classifying learners into five different affective states: boredom,
+frustration, distraction, relaxation and engagement. Each of the classification
+models achieved an accuracy of around 75% with a kappa of around 0.45, and, in
+average, J-48 was the better algorithm with an accuracy of 75.97%. Results show
+that the data gathered from the non-obtrusive sensors can successfully be used
+as another input to classification models in order to predict an individual's
+affective states.
 
 
 \end{abstract}
@@ -119,16 +144,17 @@ as a mental state in which a person performing an activity is fully immersed in 
 energized focus, full involvement, and enjoyment. Engagement is also a positive
 affect where students are thought to be more involved behaviourally,
 intellectually, and emotionally in their learning tasks \cite{bangert2002teacher}.
+
 When designing instruction, an objective is to assign learning activities
 that result challenging to students, but not much as to frustrate them. For
 this, experienced instructors gauge a student’s affective state and then assign
-an activity with the appropriate level of difficulty. In affect-aware
-intelligent learning environments (ILEs), emotions have a central role in the
-students' user model. However, recognition of emotions is a difficult task, even
+an activity with the appropriate level of difficulty. However, recognition of 
+emotions is a difficult task, even
 for humans. Instructors use their social intelligence often to recognize
 students’ affective states. In class a good instructor habitually reads the
 faces of students in the classroom to see if they are confused, bored or
-engaged; then decides what to do next. ILEs can be enhanced if they can offer an
+engaged; then decides what to do next. Interactive Learning Environments (ILEs)
+can be enhanced if they can offer an
 automatic perception of emotions. The recognition and simulation of human
 affects are becoming important fields of study, as many researchers have
 demonstrated affect-aware computers can provide better performance in assisting
@@ -154,7 +180,7 @@ has three main components: a Javascript library to capture keyboard and mouse
 dynamics from a browser-based editor, a pre-processing step whose output is a
 feature vector that is sent to the third component, a classification algorithm.
 An experiment was conducted where students solved a series of programming
-exercises using a web based learning environment. Using only the data from the
+exercises using the web based learning environment. Using only the data from the
 student’s keyboard and mouse dynamics six affective states where recognized for
 each of the attempts at solving the exercises. Results obtained from the
 experiment are promising. The affective states recognized include the most
