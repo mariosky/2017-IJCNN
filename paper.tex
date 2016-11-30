@@ -92,8 +92,8 @@ classification algorithms: Naïve Bayes, J-48, k-NN, and Artificial Neural
 Networks. These classification models are then compared by their performances
 when classifying learners into five different affective states: boredom,
 frustration, distraction, relaxation and engagement. Each of the classification
-models achieved an accuracy of around 75% with a kappa of around 0.45, and, in
-average, J-48 was the better algorithm with an accuracy of 75.97%. Results show
+models achieved an accuracy of around 75\% with a kappa of around 0.45, and, in
+average, J-48 was the better algorithm with an accuracy of 75.97\%. Results show
 that the data gathered from the non-obtrusive sensors can successfully be used
 as another input to classification models in order to predict an individual's
 affective states.
@@ -650,29 +650,36 @@ by D’Mello et al. \cite{bixler2013detecting} and Rodrigo et al. \cite{rodrigo2
 Although Flow/Engagement was
 also the predominant class, the distribution is skewed to the first two. There
 are some possible reasons for this; first the majority of students had
-experience in programming, so learning new one is not that problematic, a second
+prior experience in programming, so learning new one is not that problematic, a second
 reason could be the freedom users had to abandon the activities, perhaps
 frustrated or bored learners simply quit the tutorial. A high number of learners
 (49\%) did not completed any exercise and the once who completed more where also
 the more experienced.
 
 Classifiers where implemented using the software Rapid Miner using a feature
-selection module as part of the process. A genetic algorithm was used in the
-user selection module. In the end, the subset for the frustration classifier
+selection module % which one? - JJ
+as part of the process. A genetic algorithm was used in the
+user selection module. % Which one? You really have to be _way_ more
+                       % specific in this conference - JJ
+In the end, the subset for the frustration classifier
 consists of 11 features, and the subset for the boredom classifier consists of
 13 features. The performance of the classifiers is shown in Table 1. 
 
+%Start with a reference to the Table (and check numbering) - JJ
 The results obtained with this method are satisfactory, considering a free-text
-was used. The accuracies and kappa coefficients obtained are close to what is
+was used. % don't get this. What free text? A program? - JJ
+The accuracies and kappa coefficients obtained are close to what is
 usually obtained in fixed-text methods, for example, the results presented in
-Epp, Lippold y Mandryk (2007). In the case of the kappa coefficients, it is
+Epp, Lippold y Mandryk (2007). %A reference!!! - JJ
+ In the case of the kappa coefficients, it is
 usual to see values below 0.2 in methods involving free-text. In this case, some
 values of kappa were close to 0.5, is important to consider the values of kappa
 in these results because the class distribution is not uniformly distributed. As
 it is observed in many works in affective recognition, decision trees normally
 produce competitive accuracy. In this case the J-48 classifier obtained an
-accuracy of 80.48\% marginally better than the others, and an accepted kappa
-statistic for the kind of problem. Artificial neural network give the highest
+accuracy of 80.48\%, which is marginally better than the others, and an accepted kappa
+statistic for the kind of problem. The artificial neural network % Which one? - JJ
+give the highest
 accuracy in the classification of frustration.
 
  
@@ -689,6 +696,10 @@ dynamics. A possible explanation of this would be the addition of the mouse
 dynamics features and the additional preprocessing performed on the feature vectors. 
 While these are promising results further experiments are needed. Other experiments
 should focus on novice programmers.
+% But you have to comment on how this addresses the problem. Which
+% should be in the title that is not there yet - JJ
+% You also have to draw a _hard_ conclusion. Is programming using free
+% text better than what? Typing a fixed text? 
 
 Future work will focus on extracting other features from the learners’ interaction
 like behavioral data, as proposed by Blikstein (2011); the data includes the size
