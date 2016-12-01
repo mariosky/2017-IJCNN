@@ -83,8 +83,12 @@ of programmers with different levels of expertise when learning a new
 programming language. For this, an interactive web-based programming platform
 is proposed. The platform is designed to collect data from the students'
 interaction for data analysis. Current work is focused on the prediction of
-affective states using non-obtrusive sensors. Specifically, the proposed method uses data
-gathered from both keyboard and mouse dynamics. The data set was generated
+affective states using non-obtrusive sensors. Specifically,  the aim of this research 
+is to evaluate the use of keyboard and mouse dynamics as an appropriate 
+sensory input for an affective recognition
+system. The proposed method uses a data mining approach in data 
+genearated from both keyboard and mouse dynamics of students as they 
+work in programming assignments. The data set was generated
 as students learned the basics of Python programming. Feature vectors 
 were generated with 39 features representing the dynamics of the interaction. 
 In total 149 feature vectors were generated and used as input of four different
@@ -97,6 +101,7 @@ average, J-48 was the better algorithm with an accuracy of 75.97\%. Results show
 that the data gathered from the non-obtrusive sensors can successfully be used
 as another input to classification models in order to predict an individual's
 affective states.
+
 
 
 \end{abstract}
@@ -232,7 +237,7 @@ presents a series of works related to the proposed method in this paper; Section
 \ref{sec:method} describes the proposed method for the recognition of affective
 states in a web based learning environment for the teaching of programming
 languages; next in Section \ref{sec:exp} we explain the experimental evaluation of the
-proposed method. % There is no results section so far
+proposed method, and results are discussed in Section \ref{sec:res}  % There is no results section so far
 Finally, we draw some conclusions about our methodology and
 experimients. 
 
@@ -670,8 +675,8 @@ the initial survey is shown in Table \ref{tab_results}. %Please use reference. F
 
 
 In order to determine what affective states a student was experiencing, the
-Experience Sampling Method (ESM) \cite{kubey1996experience} was used .
-After the students successfully solve a programming exercise, they are presented
+Experience Sampling Method (ESM) \cite{kubey1996experience} was used.
+After the students successfully solve a programming exercise, they were presented
 with an ESM survey that asks what they were feeling during their solving of the
 exercise. A very brief description is given about what to do in this survey,
 followed by statements the students need to answer according to how they were
@@ -701,23 +706,32 @@ frustrated or bored learners simply quit the tutorial. A high number of learners
 (49\%) did not completed any exercise and the once who completed more where also
 the more experienced.
 
-Classifiers where implemented using the software Rapid Miner using a feature
-selection module % which one? - JJ
-as part of the process. A genetic algorithm was used in the
-user selection module. % Which one? You really have to be _way_ more
+As part of the data mining process a genetic algorithm was used for feature
+selection with the following parameters: population size 700, 30 generations with
+tournament selection, tournament size was 25\% of population size. A uniform crossover 
+with 0.5 probability and mutation of 1/number of features, and a minimum feature size of 5.
+  % Which one? You really have to be _way_ more
                        % specific in this conference - JJ
 In the end, the subset for the frustration classifier
 consists of 11 features, and the subset for the boredom classifier consists of
-13 features. The performance of the classifiers is shown in Table \ref{tab_performance}. 
+13 features.
 
-%Start with a reference to the Table (and check numbering) - JJ
-The results obtained with this method are satisfactory, considering a free-text
-was used. % don't get this. What free text? A program? - JJ
+The selected classifiers where implemented using Rapid Miner, with the following patameters:
+
+
+\section{Results}
+\label{sec:res} 
+In Table \ref{tab_performance} the performance of each of the four classifiers is together 
+with the kappa coefficients. A 10-Fold cross validation was used. 
 The accuracies and kappa coefficients obtained are close to what is
 usually obtained in fixed-text methods, for example, the results presented in
 Epp, Lippold y Mandryk \cite{epp2011identifying}. %A reference!!! - JJ  
 												 %Added	
- In the case of the kappa coefficients, it is
+In a fixed-text method, subjects are asked to write specific texts.											 
+The results obtained with this method are satisfactory, considering that learners
+were writing a program, a task comparable with free-text writing, where there
+is no restriction on what has to be writen. % don't get this. What free text? A program? - JJ
+In the case of the kappa coefficients, it is
 usual to see values below 0.2 in methods involving free-text. In this case, some
 values of kappa were close to 0.5, is important to consider the values of kappa
 in these results because the class distribution is not uniformly distributed. As
@@ -749,7 +763,7 @@ should focus on novice programmers.
 % Is 80% effective? 
 
 Future work will focus on extracting other features from the learners’ interaction
-like behavioral data, as proposed by Blikstein (2011); the data includes the size
+like behavioral data, as proposed by Blikstein \cite{blikstein2011using} ; the data includes the size
 of the program and changes in the code. Other authors also propose treating the use
 of certain keys as features e.g., the delete key because is manly used for correcting
 sentences. Also a multimodal approach is needed. 
