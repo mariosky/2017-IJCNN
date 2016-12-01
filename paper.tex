@@ -179,28 +179,26 @@ While doing this, data can be collected, all the dynamics of actually writing
 the code in the keyboard, errors, corrections, ellapsed time, number of attempts,
 compiling errors, exceptions, among others. Data mining of this data, could
 bring us a better understanding of the learning process, and also a better model to 
-both select the appropriate content and evaluate of the learner’s competencies. 
+both the selection of the appropriate content and to evaluate the learner’s competencies.
 %But the problem is how to recognize this state so that it can be used
 %to (select appropriate content| give grades| whatever ) - JJ
 % I highlited the Data Ming task for the track, and that there are other options
 % for Data Analytics   
 In this work, a method for the recognition of affective states through the
-mining of keystroke and mouse dynamics data is proposed. The hypothesis is that students vary the dynamic
-of keystrokes according to their affective state when programming.
-%%
-%%
-
-
- 
+mining of keystroke and mouse dynamics data is proposed. 
+The hypothesis is that students can vary the dynamic of keystrokes according 
+to their affective state when programming. A correlation of the 
+user’s interactions (keyboard and mouse) with an emotional state, has been 
+established in the preliminary work by Zimmermann
+et al. \cite{zimmermann2003affective}, but the work experiments where
+conducted by asking users to write a predefined message. 
 % since Bosch or whatever has already proved that this is possible (or
 % whatever) --> Establish the state of the art and how you plan to
 % advance from it - JJ
-
 For this, an interactive web-based programming platform
 is proposed. The platform is designed to collect data from the students'
 interaction for data analysis.
-
- The method
+The proposed method
 has three main components: a Javascript library to capture keyboard and mouse
 dynamics from a browser-based editor, a pre-processing step whose output is a
 feature vector that is sent to the third component, a classification algorithm.
