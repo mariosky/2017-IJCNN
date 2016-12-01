@@ -108,17 +108,21 @@ affective states.
 Introductory programming courses are
 generally regarded as difficult \cite{robins2003learning,lahtinen2005study} 
 and there is a common conception that they often have a high
-failure rate \cite{bennedsen2007failure}. There are multiple factors
-involved in this lack of success.
-Jenkins \cite{jenkins2001motivation} argues that there is a deep  relation with the expectations,
-attitudes, and previous experiences of the teaching staff and students. Another
-factor is the nature of the subject that involves the learning of new abstract
-constructs, syntax and tools. % Same guy here? - JJ
-Also groups are often heterogeneous and thus it is
-difficult to design courses that are beneficial for everyone. Many students
-begin to program when they are at their first year of university which
-means they are tackling a totally new topic that does not respond to their habitual
-study approaches. % same reference? You should itemize the claims - JJ
+failure rate \cite{bennedsen2007failure}. Jenkins \cite{jenkins2001motivation} argues that there 
+are multiple factors involved in this lack of success: 
+\begin{itemize}
+\item There is a deep relation with the expectations, attitudes, 
+and previous experiences of the teaching staff and students. 
+\item The nature of the subject that involves the 
+learning of new abstract constructs, syntax and tools.
+\item Groups are often heterogeneous and thus it is difficult to design courses 
+that are beneficial for everyone. Many students begin to program when they 
+are at their first year of university which means they are tackling a totally
+new topic that does not respond to their habitual study approaches. 
+\end{itemize}
+ % Same guy here? - JJ
+% same reference? You should itemize the claims - JJ
+% Hope its fixed now - MG
 On the other hand, Dijkstra \cite{dijkstra1989cruelty} argues that the subject of programming is very
 problem-solving intensive, which means that a  high precision is required because even the
 slightest perturbation can render a program totally worthless. These
@@ -137,7 +141,7 @@ and the outcome; for instance, in e-learning  \cite{kort2001affective,rossin2009
 and in programming  \cite{rodrigo2009affective,jenkins2001motivation,
 bosch2013emotions,khan2007mood}.
 
-So it is expected that flow/engagement is the ideal affective state in which
+In these works the emotion of flow/engagement is regarded as the ideal affective state in which
 students tend to be most capable of acquiring meaningful information through the
 learning process. Flow is defined by Csikszentmihalyi \cite{csikszentmihalyi1990flow}
 as a mental state in which a person performing an activity is fully immersed in a feeling of
@@ -145,7 +149,8 @@ energized focus, full involvement, and enjoyment. Engagement is also a positive
 affect where students are thought to be more involved behaviourally,
 intellectually, and emotionally in their learning tasks \cite{bangert2002teacher}.
 
-When designing instruction, an objective is to assign learning activities
+In order to promote engagement, instruction is designed with the
+objective of assigning learning activities
 that result challenging to students, but not much as to frustrate them. For
 this, experienced instructors gauge a student’s affective state and then assign
 an activity with the appropriate level of difficulty. However, recognition of 
@@ -167,14 +172,34 @@ intrusive or invasive, and can disrupt the student’s learning experience
 Other sensors such as video cameras can also be considered invasive, since they always transmit the
 identity, appearance and behaviour along with emotional data \cite{picard2001toward}.
 
+In programming courses, students solve programming problems by implementing their
+proposed solution in a particular language; in order to do this, they must write the code,
+some times compile it, and finally run it to see how it works. 
+While doing this, data can be collected, all the dynamics of actually writing 
+the code in the keyboard, errors, corrections, ellapsed time, number of attempts,
+compiling errors, exceptions, among others. Data mining of this data, could
+bring us a better understanding of the learning process, and also a better model to 
+both select the appropriate content and evaluate of the learner’s competencies. 
 %But the problem is how to recognize this state so that it can be used
 %to (select appropriate content| give grades| whatever ) - JJ
-In this work, a method for the recognition of affective states through keystroke
-and mouse dynamics is proposed. The hypothesis is that students vary the dynamic
-of keystrokes according to their affective state when programming. 
+% I highlited the Data Ming task for the track, and that there are other options
+% for Data Analytics   
+In this work, a method for the recognition of affective states through the
+mining of keystroke and mouse dynamics data is proposed. The hypothesis is that students vary the dynamic
+of keystrokes according to their affective state when programming.
+%%
+%%
+
+
+ 
 % since Bosch or whatever has already proved that this is possible (or
 % whatever) --> Establish the state of the art and how you plan to
 % advance from it - JJ
+
+For this, an interactive web-based programming platform
+is proposed. The platform is designed to collect data from the students'
+interaction for data analysis.
+
  The method
 has three main components: a Javascript library to capture keyboard and mouse
 dynamics from a browser-based editor, a pre-processing step whose output is a
