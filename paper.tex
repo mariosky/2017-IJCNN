@@ -401,6 +401,7 @@ in detail next.
 \begin{table*}[!t]
 \centering
 \caption{Table 1. The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
+\label{tab_features}
     \begin{tabular}{ | l | l || l | l | }
     \hline
     ID          & Description           & ID               & Description  \\
@@ -542,7 +543,7 @@ added to preprocessing of the data. The web tutorial recorded how many attempts
 a student required before successfully solving an exercise. This number of
 attempts is also included in the feature vector. The final feature vector
 consists of 39 features; these are based on the work of Epp, Lippold \& Mandryk
-\cite{epp2011identifying} and are shown in Table 1. (The code used for this step is available at:
+\cite{epp2011identifying} and are shown in Table \ref{tab_features}. (The code used for this step is available at:
 https://------.---/-------/-----------------------). %anonymize
 
 Once feature vectors are obtained from an experiment, the generated dataset is
@@ -591,64 +592,85 @@ any time.
 \end{figure}
 
 A tutorial was developed to
-obtain the necessary data using Protoboard, a web-based environment,
-whose latest version can be found online at
-http://python.protoboard.org/, used for learning to
-program. Protoboard has the functionality described in Section
-\ref{sec:method} and shown schematically in Figure 1. % This should be
+obtain the necessary data using the proposed platform Protoboard, a web-based environment,
+whose latest version can be found online at 
+http://------.----------.---/. 
+The main functionality  used for this experiemnt is
+shown schematically in Figure \ref{fig_process} . % This should be
                                 % a reference and I'm not sure which
                                 % one, if it's now Fig 1 or 2. - JJ
+                                % Corrected -MG
 Users log in to 
-Protoboard using their account credentials from a popular social network
-(Facebook), with the advantage that we did not have to keep these
-credentials on site.  The web tutorial begins with three introductory videos that explain
-the fundamentals of programming in Python, and how to solve the programming
-exercises in the course. What follows after these videos, are 13 programming
-exercises that the students need to solve in consecutively. Exercises are of
-incremental difficulty. In Figures 2 and 3, % 3 is keystroke
+Protoboard  by creaing an account or by using their account credentials from the
+social network Facebook. The web tutorial begins with three introductory videos that explain
+the fundamentals of programming in Python, and how to use the editor to
+execute thier code. What follows after these videos, are 13 programming
+exercises that students need to solve in sequential order. Exercises are of
+incremental difficulty. In Figure \ref{fig_editor}, % 3 is keystroke
                                 % dynamics. Please revise all these
                                 % Figure thing. 
- the interface of this platform is
+the user interface of the programming editor is
 presented. For this experiment Protoboard was configured to allow unlimited
-attempts to solve an exercise.
+attempts to solve each exercise. 
 
 A total of 55 volunteers, with no previous experience in Python, where recruited
 as a response to three announcements in a special interest group of programming
 students in a social network, but the fact that they needed Facebook kept some prospects from
 volunteering; a subject reported that he normally creates temporary email
 accounts to try new web services; however, the use of Facebook gave researchers access to public
-information about the subjects:  all the learners were either current students or
-graduates of Computer Systems Engineering. Their ages were in the range of 18 to
+information about the subjects. Their ages were in the range of 18 to
 30 years. Although no experience in software programming was needed, as the
-web tutorial's course is of a very basic level, all the participants were
-required had completed at least one course in software programming. Results from
-the initial survey are shown in Figure 4. %Please use reference. Fig 4
+web tutorial's course is of a very basic level, participants had
+different levels of experience. Results from
+the initial survey is shown in Table \ref{tab_results}. %Please use reference. Fig 4
                                 %is completed activities. I think this
                                 %should be Fig 5. 
 \begin{table*}[!t]
 \centering
-\caption{The performance of the classifiers.}
+\caption{ Survey question: How many years of programming experience do you have? }
+\label{tab_results}
+    \begin{tabular}{ | c | l | }
+    \hline
+    Years Programming          & Number of Learners \\
+    \hline
+   		0   &  8 \\
+    \hline
+    	1   &  13\\
+    \hline
+    	2-4  & 15\\
+    \hline
+    	5+   & 22\\
+    \hline
+    \end{tabular}
+
+\end{table*}
+
+
+\begin{table*}[!t]
+\centering
+\caption{Performance of the each of the classifiers with 10-fold cross validation. Accuracy (kappa) }
+\label{tab_performance}
     \begin{tabular}{ | c | l | l | l | l | }
     \hline
     Affect          & Na\"ive Bayes           & J-48                & k-NN              & ANN \\
     \hline
-    Flow/engaged    & 79.00\% (0.11) 0.50   & 80.48\% (0.10) 0.51 & 76.14(0.09) 0.43    & 78.43(0.12) 0.45 \\
+    Flow/engaged    & 79.00\% 0.50 & 80.48\% 0.51 & 76.14\% 0.43 & 78.43\% 0.45 \\
     \hline
-    Relaxation      & 71.10\% (0.09) 0.40   & 72.57\% (0.11) 0.45 & 69.14\%(0.08)  0.37 & 71.24\%(0.07)  0.34\\
+    Relaxation      & 71.10\% 0.40 & 72.57\% 0.45 & 69.14\% 0.37 & 71.24\% 0.34\\
     \hline
-    Distraction     & 70.33\% (0.13)  0.43  & 71.00\% (0.10) 0.43 & 74.00\%(0.06)  0.50 & 72.52\%(0.07)  0.39\\
+    Distraction     & 70.33\% 0.43 & 71.00\% 0.43 & 74.00\% 0.50 & 72.52\% 0.39\\
     \hline
-    Frustration     & 74.71\% (0.09) 0.49   & 73.86\% (0.12) 0.45 & 72.62\%(0.09)  0.42 & 78.0\%(0.09)  0.51 \\
+    Frustration     & 74.71\% 0.49 & 73.86\% 0.45 & 72.62\% 0.42 & 78.00\% 0.50\\
     \hline
-    Boredom         & 74.71\% (0.13) 0.47   & 84.57\% (0.06) 0.59 & 83.81\%(0.06)  0.58 & 76.19\%(0.09)  0.45\\
+    Boredom         & 74.71\% 0.47 & 84.57\% 0.59 & 83.81\% 0.58 & 76.19\% 0.45\\
     \hline
     \end{tabular}
 \end{table*}
 
 
 
-In order to determine what affective states a student was experiencing, an
-Experience Sampling Method (ESM) was used (Csikszentmihalyi y Larson, 1987).
+In order to determine what affective states a student was experiencing, the
+Experience Sampling Method (ESM) \cite{kubey1996experience} was used .
 After the students successfully solve a programming exercise, they are presented
 with an ESM survey that asks what they were feeling during their solving of the
 exercise. A very brief description is given about what to do in this survey,
@@ -659,7 +681,7 @@ and a student needs to answer either “Strongly agree,” “Agree,” “Neutr
 
 After the two weeks of the experiment, only four learners completed all of the
 programming exercises and 22 did not completed any. Out of the total activities
-available (videos, survey and questionnaires) only two completed all. Figure 5
+available (videos, survey and questionnaires) only two completed all. Figure \ref{fig_completed}
 shows the number of exercises and activities completed by each learner.
   
 The participants' interaction generated a total of 142 feature vectors one for each
@@ -686,7 +708,7 @@ user selection module. % Which one? You really have to be _way_ more
                        % specific in this conference - JJ
 In the end, the subset for the frustration classifier
 consists of 11 features, and the subset for the boredom classifier consists of
-13 features. The performance of the classifiers is shown in Table 1. 
+13 features. The performance of the classifiers is shown in Table \ref{tab_performance}. 
 
 %Start with a reference to the Table (and check numbering) - JJ
 The results obtained with this method are satisfactory, considering a free-text
