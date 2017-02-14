@@ -1,5 +1,6 @@
-
-\documentclass[conference]{IEEEtran}
+\documentclass[a4paper]{llncs}
+\usepackage{subcaption} % an alternative package for sub figures
+\usepackage{llncsdoc}
 
 % *** CITATION PACKAGES ***
 %
@@ -36,41 +37,19 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{ 
-Recognition of Student Engagement and Frustration with Programming Assignments
-using Keystroke and Mouse Dynamics}
+\title{Enhancing Student Engagement via Reduction of Frustration with Programming Assignments using Machine Learning}
 
-% author names and affiliations
-% use a multiple column layout for up to three different
-% affiliations
-\author{\IEEEauthorblockN{Kevin Bacon}
-\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
-Georgia Institute of Technology\\
-Atlanta, Georgia 30332--0250\\
-Email: http://www.kev.org/contact.html}
+\author{Mario Garcia Valdez\inst{1}, Amaury Hernandez Aguila\inst{1}, Juan-J. Merelo\inst{2} and Alejandra Mancilla Soto\inst{1}}
+\institute{ Dept. of Graduate Studies, Instituto Tecnologico de Tijuana (Mexico)\\
+    \email{\tt mario@tectijuana.edu.mx}
 \and
-\IEEEauthorblockN{Homer Simpson}
-\IEEEauthorblockA{Twentieth Century Fox\\
-Springfield, USA\\
-Email: homer@thesimpsons.com}
-\and
-\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
-\IEEEauthorblockA{Starfleet Academy\\
-San Francisco, California 96678--2391\\
-Telephone: (800) 555--1212\\
-Fax: (888) 555--1212}}
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
-
+Geneura Team and CITIC, University of Granada (Spain)\\
+    \email{\tt jmerelo@ugr.es}
+}
 
 % make the title area 
-
-
 \maketitle
+
 \begin{abstract} 
 
 Learning to program is often regarded as a difficult task, courses are 
@@ -791,7 +770,7 @@ only to keep the needed space this is only to keep the space.
 
 % references section
 
-\bibliographystyle{IEEEtran} 
+\bibliographystyle{splncs03} 
 % argument is your BibTeX string definitions and bibliography database(s) 
 \bibliography{programming} 
 \end{document}
