@@ -1,24 +1,14 @@
 \documentclass[a4paper]{llncs}
-\usepackage{subcaption} % an alternative package for sub figures
+
 \usepackage{llncsdoc}
+
+\usepackage{graphicx,grffile}
+
+\graphicspath{{img/}}
 
 % *** CITATION PACKAGES ***
 %
 \usepackage{cite}
-
-% *** GRAPHICS RELATED PACKAGES ***
-%
-\ifCLASSINFOpdf
-\usepackage[pdftex]{graphicx}
-  % declare the path(s) where your graphic files are
-\graphicspath{{./img/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-\else
-
-\fi
-
 
 \usepackage{stfloats}
 % *** PDF, URL AND HYPERLINK PACKAGES ***
