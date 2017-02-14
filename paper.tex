@@ -192,7 +192,7 @@ presents a series of works related to the proposed method in this paper; Section
 \ref{sec:method} describes the proposed method for the recognition of affective
 states in a web based learning environment for the teaching of programming
 languages; next in Section \ref{sec:exp} we explain the experimental evaluation of the
-proposed method, and results are discussed in Section \ref{sec:res}  % There is no results section so far
+proposed method and results.
 Finally, we draw some conclusions about our methodology and
 experiments. 
 
@@ -226,84 +226,32 @@ affective recognition using nonintrusive sensory information from facial
 expressions, gross body movements, and conversational cues from logs.  The
 subject material of that system consisted in lectures of computer literacy.
 
-Elliott, Rickel y Lester \cite{elliott1999lifelike,d2008autotutor} propose the integration of an affective reasoner
-with an agent in a virtual environment. In this work an agent called Steve
-responds emotionally to other agents and interactive users. The agent simulates
-his emotions through different multimedia modes including facial expressions and
-speech. Affective reasoning agents were used for training, by putting students
-in work related situations. Agents could react to the behavior of students, for
-instance if a student was being careless in a task and was in a dangerous
-situation, Steve would show distress or fear. Also in a virtual environment the
-work of McQuiggan, Robison \& Lester \cite{mcquiggan2010affective} extends this line of research by
-investigating the affective transitions that occur throughout narrative-centered
-learning experiences. The analysis of affective state transitions in this work
-replicated the findings by D’Mello et al. \cite{d2008autotutor} and Baker et al. 
-\cite{rodrigo2009affective} where
-also engagement/flow dominated self-reported affect. For outdoor environments
-Shen, Wang \& Shen \cite{shen2009affective} augment a pervasive e-learning platform with affective
-recognition.  The results about emotion recognition from physiological signals
-achieved a best-case accuracy (86.3\%) for four types of learning emotions.
-
 Bosch, D'Mello \& Mills \cite{bosch2013emotions} analyzed the relationship between affective states
-and performance of novice programmers when they were learning the basics of
-computer programming in the Python language. The results of their study
-indicated that the more common emotions students experienced were engaged
+and performance of novice programmers learning the basic Python. The results of their study
+indicated that the most common emotions students experienced were engaged
 (23\%), confusion (22\%), frustration (14\%), and boredom (12\%). It was useful
 to consider these results, as it presented evidence of what affective states
-need to be targeted in order to obtain less biased data. For example, if a less
-common emotion was chosen, a classifier could opt to classify any feature vector
-as not experiencing such emotion. Nevertheless, the classifier would obtain
-accurate results, although the classifier would be inaccurate at determining if
-a feature vector was actually experiencing the given affective state. Similar to
+need to be targeted in order to obtain less biased data. Similar to
 the previous work, Rodrigo et al., \cite{rodrigo2009affective} observed which affective states and
 behaviors relate to student's achievement within a basic computer science
 course. The authors found that confusion, boredom and engagement in IDE-related
-(on-task) conversation are associated with lower achievement.
+(on-task) conversation are associated with lower achievement. Measuring mood is important, since it may have an impact on programmer’s performance according
+to Khan, Hierons y Brinkman \cite{khan2007mood}. It may be possible to detect moods
+on the basis of information regarding the programmer’s use of the keyboard and
+mouse, and to integrate them into development environments that can improve
+programmer performance. 
 
 There has been very little research reported on the effectiveness of the use of
 keyboard and mouse dynamics as a sensory channel for affective recognition, and
 the few have not been focused on programming. The preliminary work by Zimmermann
 et al. \cite{zimmermann2003affective} describes a method to correlate user’s interactions (keyboard and
-mouse) with an emotional state. Several physiological parameters were measured
-concurrent with the task. The parameters included respiration, pulse, skin
-conductance level, and corrugation activity. The task assigned to subjects was to
-shop on an e-commerce website for office-supplies and finally write a predefined
-message to the shop operator. Subjects where watching videos in order to change
-their emotional state during the experiment. The method was validated using
-self-reported emotions using the self-assessment-manikin (SAM), devised by Lang
-\cite{lang1980behavioral}, designed to assess the dimensions valence, arousal and dominance
-directly by means of three sets of graphical manikins. Results show that the
-film clips were effective in inducing the expected mood changes, but no further
-empirical results are presented. The work of Vizer, Zhou \& Sears \cite{vizer2009automated} also
+mouse) with an emotional state, meauring different physiological parameters. The work of Vizer, Zhou \& Sears \cite{vizer2009automated} also
 uses sensory data based on the time elapsed between each key press, the task
 given to users was to write a free-text and used linguistic features in order to
 recognize both physical and emotional stress. The results show a classification
 accuracy of 62.5\% for physical stress and 75\% from emotional stress; authors
 argue that these results are comparable with other approaches in affective
-computing. They also stress that their methods must be validated further in
-other contexts. Moods may have an impact on programmer’s performance according
-to Khan, Hierons y Brinkman \cite{khan2007mood}. It may be possible to detect moods
-on the basis of information regarding the programmer’s use of the keyboard and
-mouse, and to integrate them into development environments that can improve
-programmer performance. They briefly describe a further experiment that could
-use keyboard and mouse but only as future work. There are other studies about
-the behavior of programmers, which are not directly concerned with affective
-states but are nevertheless important to their performance. Eye tracking in
-computing education is proposed in the work Busjahn et al., \cite{busjahn2014eye}, and it is
-also used for assessing learner´s comprehension of C++ and Python programs in
-Turner et al., \cite{turner2014eye}. Blikstein \cite{blikstein2011using} proposed 
-an automated technique to
-assess, analyze and visualize students learning computer programming. Blikstein
-employs different quantitative techniques to extract students’ behaviors and
-categorize them in terms of programming experience.
-
-% \begin{figure}[!t] 
-% \centering 
-% \includegraphics[width=2.5in]{KMDAffective.png} 
-% \caption{Code Execution and Affect Recognition Architecture.}
-% \label{fig_process} 
-% \end{figure}
-
+computing. 
 
 Research works related to Keystroke Dynamics (KD) are carried out either using
 fixed-texts, or free-texts Gunetti y Picardi \cite{gunetti2005keystroke}.
@@ -326,11 +274,7 @@ with decision-tree classifiers for the identification of 15 affective states.
 Although their work was based on fixed text, their technique to extract a feature
 vector was an inspiration for the proposed method in this work. As for free-text
 KD, Bixler y D'Mello \cite{bixler2013detecting} present a method for the identification of boredom
-and engagement based on several classification models.
-
-Regarding Mouse Dynamics (MD), some research has been conducted for the
-identification of affective states, although, as with the case of KD, MD is
-mainly used as a biometric measure for authentication. Salmeron-Majadas, Santos
+and engagement based on several classification models. A similar situation exists in the case of Mouse Dynamics (MD), which is used mainly for authentication; however, Salmeron-Majadas, Santos
 and Boticario \cite{salmeron2014exploring} use both MD and KD to predict four affective states using
 five different classification algorithms. Bakhtiyari y Husain \cite{bakhtiyari2014fuzzy} discuss a
 method based on fuzzy models for the recognition of emotions through KD, MD and
@@ -501,12 +445,10 @@ and could be meaningful for the estimation of a learner's affective states.
 Regarding the mouse movements, the average and standard deviation of the
 duration of each mouse movement, and the averages and standard deviations of the
 movements in the axes X and Y are also calculated. Lastly, a final feature is
-added to preprocessing of the data. The web tutorial recorded how many attempts
-a student required before successfully solving an exercise. This number of
-attempts is also included in the feature vector. The final feature vector
+added to preprocessing of the data. The web tutorial recorded  and included in the feature vector how many attempts
+a student required before successfully solving an exercise. The final feature vector
 consists of 39 features; these are based on the work of Epp, Lippold \& Mandryk
-\cite{epp2011identifying} and are shown in Table \ref{tab_features}. (The code used for this step is available at:
-https://------.---/-------/-----------------------). %anonymize
+\cite{epp2011identifying} and are shown in Table \ref{tab_features}.
 
 Once feature vectors are obtained from an experiment, the generated dataset is
 normally used as training data for a classifier. Researchers of affective
@@ -514,11 +456,9 @@ recognition have used a wide variety of classification algorithms. As a proof of
 concept four well known classification algorithms where compared: k-Nearest
 Neighbors (k-NN) algorithm, a feed forward neural network trained with back-
 propagation, a na\"ive Bayes classifier and finally a decision trees algorithm for
-rational data (J-48). Details for these algorithms, can be found in the textbook
-by Tan, Steinbach, \& Kumar \cite{tan2006introduction}. The accuracies obtained by these algorithms
-as well as the parameters used are reported in the next section.
+rational data (J-48) \cite{tan2006introduction}. Experiments and results will be presented next. 
 
-\section{Experiment}
+\section{Experiment and results}
 \label{sec:exp}
 The aim of this research is to evaluate the use of keyboard
 and mouse dynamics as an appropriate sensory input for an affective recognition
@@ -574,34 +514,32 @@ accounts to try new web services; however, the use of Facebook gave researchers 
 information about the subjects. Their ages were in the range of 18 to
 30 years. Although no experience in software programming was needed, as the
 web tutorial's course is of a very basic level, participants had
-different levels of experience. Results from
-the initial survey is shown in Table \ref{tab_results}. %Please use reference. Fig 4
-                                %is completed activities. I think this
-                                %should be Fig 5. 
-\begin{table*}[!t]
-\centering
-\caption{ Survey question: How many years of programming experience do you have? }
-\label{tab_results}
-    \begin{tabular}{ | c | l | }
-    \hline
-    Years Programming          & Number of Learners \\
-    \hline
-   		0   &  8 \\
-    \hline
-    	1   &  13\\
-    \hline
-    	2-4  & 15\\
-    \hline
-    	5+   & 22\\
-    \hline
-    \end{tabular}
+different levels of experience, from 0 (8 persons) to more than 5 (22).
 
-\end{table*}
+% \begin{table*}[!t]
+% \centering
+% \caption{ Survey question: How many years of programming experience do you have? }
+% \label{tab_results}
+%     \begin{tabular}{ | c | l | }
+%     \hline
+%     Years Programming          & Number of Learners \\
+%     \hline
+%    		0   &  8 \\
+%     \hline
+%     	1   &  13\\
+%     \hline
+%     	2-4  & 15\\
+%     \hline
+%     	5+   & 22\\
+%     \hline
+%     \end{tabular}
+
+% \end{table*}
 
 
 \begin{table*}[!t]
 \centering
-\caption{Performance of the each of the classifiers with 10-fold cross validation. Accuracy (kappa) }
+\caption{Performance of the each of the classifiers with 10-fold cross validation. Accuracy ($\kappa$) }
 \label{tab_performance}
     \begin{tabular}{ | c | l | l | l | l | }
     \hline
@@ -670,11 +608,9 @@ minimum of 2 instances per leaf, and 3 folds for reduced error pruning. The feed
 neural network used a back-propagation learning algorithm with two hidden layer of 20 neurons
 each, with a learning rate and momentum of 0.6, and was trained for 200 generations.
 
-\section{Results}
-\label{sec:res} 
-In Table \ref{tab_performance} the performance of each of the four classifiers is together 
-with the kappa coefficients. A 10-Fold cross validation was used. 
-The accuracies and kappa coefficients obtained are close to what is
+Table \ref{tab_performance} shows the performance of each of the four classifiers is together 
+with the $\kappa$ coefficients. A 10-Fold cross validation was used. 
+The accuracies and $\kappa$ coefficients obtained are close to what is
 usually obtained in fixed-text methods, for example, the results presented in
 Epp, Lippold y Mandryk \cite{epp2011identifying}. %A reference!!! - JJ  
 												 %Added	
@@ -682,13 +618,13 @@ In a fixed-text method, subjects are asked to write specific texts.
 The results obtained with this method are satisfactory, considering that learners
 were writing a program, a task comparable with free-text writing, where there
 is no restriction on what has to be written. % don't get this. What free text? A program? - JJ
-In the case of the kappa coefficients, it is
+In the case of the $\kappa$ coefficients, it is
 usual to see values below 0.2 in methods involving free-text. In this case, some
-values of kappa were close to 0.5, is important to consider the values of kappa
+values of $\kappa$ were close to 0.5, is important to consider the values of $\kappa$
 in these results because the class distribution is not uniformly distributed. As
 it is observed in many works in affective recognition, decision trees normally
 produce competitive accuracy. In this case the J-48 classifier obtained an
-accuracy of 80.48\%, which is marginally better than the others, and an accepted kappa
+accuracy of 80.48\%, which is marginally better than the others, and an accepted $\kappa$
 statistic for the kind of problem. The artificial neural network % Which one? - JJ
 give the highest
 accuracy in the classification of frustration.
@@ -701,7 +637,7 @@ of use would be learning environment for programmers. In particular for learning
 activities consisting in writing short programs interactively. An experimental
 approach was adopted with this aim. The proposed method in this work obtained
 satisfactory results. It is usual for a classification method based on free-text
-to obtain an accuracy and kappa below their counterparts of fixed-text, and in this
+to obtain an accuracy and $\kappa$ below their counterparts of fixed-text, and in this
 work the results obtained were similar to those works applied to fixed-text 
 dynamics. A possible explanation of this would be the addition of the mouse 
 dynamics features and the additional preprocessing performed on the feature vectors. 
