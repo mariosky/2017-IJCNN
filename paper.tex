@@ -238,7 +238,26 @@ using a multimodal Gaussian Process approach achieving an accuracy of over 86\%.
 Sidney, et al., \cite{sidney2005integrating} enhances the intelligent tutor system AutoTutor with
 affective recognition using non-intrusive sensory information from facial
 expressions, gross body movements, and conversational cues from logs.  The
-subject material of that system consisted in lectures of computer literacy.
+subject material of that system consisted in lectures of computer
+literacy.
+
+Elliott, Rickel y Lester \cite{elliott1999lifelike,d2008autotutor} propose the integration of an affective reasoner
+with an agent in a virtual environment. In this work an agent called Steve
+responds emotionally to other agents and interactive users. The agent simulates
+his emotions through different multimedia modes including facial expressions and
+speech. Affective reasoning agents were used for training, by putting students
+in work related situations. Agents could react to the behavior of students, for
+instance if a student was being careless in a task and was in a dangerous
+situation, Steve would show distress or fear. Also in a virtual environment the
+work of McQuiggan, Robison \& Lester \cite{mcquiggan2010affective} extends this line of research by
+investigating the affective transitions that occur throughout narrative-centered
+learning experiences. The analysis of affective state transitions in this work
+replicated the findings by D’Mello et al. \cite{d2008autotutor} and Baker et al. 
+\cite{rodrigo2009affective} where
+also engagement/flow dominated self-reported affect. For outdoor environments
+Shen, Wang \& Shen \cite{shen2009affective} augment a pervasive e-learning platform with affective
+recognition.  The results about emotion recognition from physiological signals
+achieved a best-case accuracy (86.3\%) for four types of learning emotions.
 
 Bosch, D'Mello \& Mills \cite{bosch2013emotions} analyzed the relationship between affective states
 and performance of novice programmers learning the basic Python. The results of their study
@@ -265,7 +284,31 @@ given to users was to write a free-text and used linguistic features in order to
 recognize both physical and emotional stress. The results show a classification
 accuracy of 62.5\% for physical stress and 75\% from emotional stress; authors
 argue that these results are comparable with other approaches in affective
-computing. 
+computing.
+
+They also stress that their methods must be validated further in
+other contexts. Moods may have an impact on programmer’s performance according
+to Khan, Hierons y Brinkman \cite{khan2007mood}. It may be possible to detect moods
+on the basis of information regarding the programmer’s use of the keyboard and
+mouse, and to integrate them into development environments that can improve
+programmer performance. They briefly describe a further experiment that could
+use keyboard and mouse but only as future work. There are other studies about
+the behaviour of programmers, which are not directly concerned with affective
+states but are nevertheless important to their performance. Eye tracking in
+computing education is proposed in the work Busjahn et al., \cite{busjahn2014eye}, and it is
+also used for assessing learner´s comprehension of C++ and Python programs in
+Turner et al., \cite{turner2014eye}. Blikstein \cite{blikstein2011using} proposed 
+an automated technique to
+assess, analyse and visualize students learning computer programming. Blikstein
+employs different quantitative techniques to extract students’ behaviours and
+categorize them in terms of programming experience.
+
+\begin{figure*}[h!tbp] 
+\centering 
+\includegraphics[width=0.9\textwidth]{KMDAffective.png} 
+\caption{Code Execution and Affect Recognition Architecture.}
+\label{fig_process} 
+\end{figure*}
 
 Research works related to Keystroke Dynamics (KD) are carried out either using
 fixed-texts, or free-texts Gunetti y Picardi \cite{gunetti2005keystroke}.
@@ -401,14 +444,14 @@ sandbox is in http://--------.--/-----. % Anonimyze this, I guess - JJ
 
 \begin{figure*}[h!t] 
 \centering 
-\includegraphics[width=3in]{editorRresult.png} 
+\includegraphics[width=0.9\textwidth]{editorRresult.png} 
 \caption{Web-based editor used for code evaluation.}
 \label{fig_editor} 
 \end{figure*}
 
 \begin{figure*}[hb!] 
 \centering 
-\includegraphics[width=3in]{KeyDyn.png} 
+\includegraphics[width=0.9\textwidth]{KeyDyn.png} 
 \caption{Keystroke Dynamics, adapted from Sim \& Janakiraman \cite{sim2007digraphs}.}
 \label{fig_KD} 
 \end{figure*}
@@ -490,8 +533,8 @@ any time.
 %
 \begin{figure*}[!t] 
 \centering 
-\includegraphics{Completed.png} 
-\includegraphics{classDist.png} 
+\includegraphics[width=0.9\textwidth]{Completed.png} 
+\includegraphics[width=0.9\textwidth]{classDist.png} 
 \caption{Completed activities and exercises and by learner in ascending order (left) and lass distribution of emotions as reported by learners (right).}
 \label{fig_completed} 
 \end{figure*}
