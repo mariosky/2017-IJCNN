@@ -358,9 +358,9 @@ in detail next.
 
 \begin{table*}[!t]
 \centering
-\caption{Table 1. The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
+\caption{The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
 \label{tab_features}
-    \begin{tabular}{ | l | l || l | l | }
+    \begin{tabular}{ | l |p{0.4\textwidth} || l | p{0.4\textwidth} | }
     \hline
     ID          & Description           & ID               & Description  \\
     \hline
@@ -438,12 +438,14 @@ tests; the results of the evaluation are shown to users. If all tests the
 program is considered to be correct. The source code for the Protoboard web
 based learning environment including the KD and MD functions are open source and
 available as Github repositories. %at http://--------.--/----- also the code for the
-sandbox is in http://--------.--/-----. % Anonimyze this, I guess - JJ
+sandbox is in \url{https://github.com/mariosky/sandbox}.
 
 \begin{figure*}[h!t] 
 \centering 
 \includegraphics[width=0.9\textwidth]{editorRresult.png} 
-\caption{Web-based editor used for code evaluation.}
+\caption{Web-based editor used for code evaluation. The lower panel
+  indicates (in Spanish) the tests passed successfully and the program
+  output.}
 \label{fig_editor} 
 \end{figure*}
 
@@ -539,9 +541,8 @@ any time.
 
 A tutorial was developed to
 obtain the necessary data using the proposed platform Protoboard, a web-based environment,
-whose latest version has been released under an open source license. 
-% can be found on-line at 
-% http://------.----------.---/. 
+whose latest version has been released under an open source license,
+and can be found online at \url{https://github.com/mariosky/protoboard}.
 The main functionality  used for this experiment is
 shown schematically in Figure \ref{fig_process} . % Don't know what's
                                 % happened to this figure
@@ -681,29 +682,40 @@ accuracy in the classification of frustration.
 
  
 \section{Conclusion}
+
 The aim of this research was to evaluate the use of keyboard and mouse dynamics 
 as an appropriate sensory input for an affective recognition system. The context
-of use would be learning environment for programmers. In particular for learning
-activities consisting in writing short programs interactively. An experimental
-approach was adopted with this aim. The proposed method in this work obtained
+of use is a learning environment for programmers, in particular for learning
+assignments consisting in writing short programs interactively. An experimental
+approach was adopted with this objective, by effectively using the
+method with real subjects using the environment.
+
+The proposed method in this work obtained
 satisfactory results. It is usual for a classification method based on free-text
-to obtain an accuracy and $\kappa$ below their counterparts of fixed-text, and in this
+to obtain an accuracy and $\kappa$ measure below their counterparts of
+fixed-text; however, in this
 work the results obtained were similar to those works applied to fixed-text 
 dynamics. A possible explanation of this would be the addition of the mouse 
-dynamics features and the additional preprocessing performed on the feature vectors. 
+dynamics features and the additional preprocessing performed on the
+feature vectors.
+
+
 While these are promising results further experiments are needed. Other experiments
-should focus on novice programmers.
+should focus on novice programmers, but that is left as future
+work. This 
 % But you have to comment on how this addresses the problem. Which
 % should be in the title that is not there yet - JJ
 % You also have to draw a _hard_ conclusion. Is programming using free
 % text better than what? Typing a fixed text? 
 % Is 80% effective? 
-
-Future work will focus on extracting other features from the learners'  interaction
-like behavioral data, as proposed by Blikstein \cite{blikstein2011using} ; the data includes the size
+future work will focus on extracting other features from the learners' interaction
+such as behavioral data, as proposed by Blikstein
+\cite{blikstein2011using}; the parameters proposed by this author include the size
 of the program and changes in the code. Other authors also propose treating the use
 of certain keys as features e.g., the delete key because is manly used for correcting
-sentences. Also a multi-modal approach is needed. 
+sentences. Also a multi-modal approach is needed. Since all these need
+a completely new approach, a new methodology will be developed to
+gather data and take measures.  
 
 % use section* for acknowledgment 
 \section*{Acknowledgment} 
