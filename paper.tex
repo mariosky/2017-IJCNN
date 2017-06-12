@@ -358,7 +358,7 @@ The method does not consider other sensory data, but it could be integrated with
 other sensory inputs in a multi-modal approach.  Each of the steps is explained
 in detail next.
 
-\begin{table*}[!t]
+\begin{table*}[h!tb]
 \centering
 \caption{The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
 \label{tab_features}
@@ -442,7 +442,7 @@ based learning environment including the KD and MD functions are open source and
 available as Github repositories at \url{https://github.com/amherag/keyboard-mouse-dynamics}; the code for the
 sandbox is also available in \url{https://github.com/mariosky/sandbox}.
 
-\begin{figure*}[h!t] 
+\begin{figure*}[h!tb] 
 \centering 
 \includegraphics[width=0.9\textwidth]{editorRresult.png} 
 \caption{Web-based editor used for code evaluation. The lower panel
@@ -451,7 +451,7 @@ sandbox is also available in \url{https://github.com/mariosky/sandbox}.
 \label{fig_editor} 
 \end{figure*}
 
-\begin{figure*}[hb!] 
+\begin{figure*}[h!tb] 
 \centering 
 \includegraphics[width=0.9\textwidth]{KeyDyn.png} 
 \caption{Keystroke Dynamics, adapted from Sim \& Janakiraman \cite{sim2007digraphs}.}
@@ -599,15 +599,15 @@ different levels of experience, from 0 (8 persons) to more than 5 (22).
     \hline
     Affect          & Na\"ive Bayes           & J-48                & k-NN              & ANN \\
     \hline
-    Flow/engaged    & 79.00\% 0.50 & 80.48\% 0.51 & 76.14\% 0.43 & 78.43\% 0.45 \\
+    Flow/engaged    & 79.00\% (0.50) & 80.48\% (0.51) & 76.14\% (0.43) & 78.43\% (0.45) \\
     \hline
-    Relaxation      & 71.10\% 0.40 & 72.57\% 0.45 & 69.14\% 0.37 & 71.24\% 0.34\\
+    Relaxation      & 71.10\% (0.40) & 72.57\% (0.45) & 69.14\% (0.37) & 71.24\% (0.34)\\
     \hline
-    Distraction     & 70.33\% 0.43 & 71.00\% 0.43 & 74.00\% 0.50 & 72.52\% 0.39\\
+    Distraction     & 70.33\% (0.43) & 71.00\% (0.43) & 74.00\% (0.50) & 72.52\% (0.39)\\
     \hline
-    Frustration     & 74.71\% 0.49 & 73.86\% 0.45 & 72.62\% 0.42 & 78.00\% 0.50\\
+    Frustration     & 74.71\% (0.49) & 73.86\% (0.45) & 72.62\% (0.42) & 78.00\% (0.50)\\
     \hline
-    Boredom         & 74.71\% 0.47 & 84.57\% 0.59 & 83.81\% 0.58 & 76.19\% 0.45\\
+    Boredom         & 74.71\% (0.47) & 84.57\% (0.59) & 83.81\% (0.58) & 76.19\% (0.45)\\
     \hline
     \end{tabular}
 \end{table*}
@@ -679,8 +679,8 @@ in these results because the class distribution is not uniformly distributed. As
 it is observed in many works in affective recognition, decision trees normally
 produce competitive accuracy. In this case the J-48 classifier obtained an
 accuracy of 80.48\%, which is marginally better than the others, and an accepted $\kappa$
-statistic for the kind of problem. The artificial neural network % Which one? - JJ
-give the highest
+statistic for the kind of problem. The artificial neural network (ANN)
+gives the highest
 accuracy in the classification of frustration.
 
  
@@ -700,7 +700,9 @@ fixed-text; however, in this
 work the results obtained were similar to those works applied to fixed-text 
 dynamics. A possible explanation of this would be the addition of the mouse 
 dynamics features and the additional preprocessing performed on the
-feature vectors.
+feature vectors. Out of all methods tested, an artificial neural
+network (as provided by RapidMiner) gave the best classification
+results. 
 
 
 While these are promising results further experiments are needed. Other experiments
