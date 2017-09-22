@@ -137,19 +137,21 @@ affects are becoming important fields of study, and many researchers have
 demonstrated that affect-aware computers can provide a better performance in assisting
 humans \cite{picard2001toward}. When ILEs embrace these methodologies and techniques a
 problem arises. Sensors must be used to gather data, in order to perform the 
-recognition of users\' affective states. Some sensors rely on physiological readings
-and must be in physical contact with students. These sensors can be considered
-intrusive or invasive, and can disrupt the student\'s learning experience 
-\cite{zhai2008stress, sidney2005integrating, arroyo2009emotion}.
-Other sensors such as video cameras can also be considered invasive, since they always transmit the
-identity, appearance and behavior along with emotional data \cite{picard2001toward}.
+recognition of users\' affective states.
+%Some sensors rely on physiological readings
+%and must be in physical contact with students.
+% These sensors can be considered
+% intrusive or invasive, and can disrupt the student\'s learning experience 
+% \cite{zhai2008stress, sidney2005integrating, arroyo2009emotion}.
+% Other sensors such as video cameras can also be considered invasive, since they always transmit the
+% identity, appearance and behavior along with emotional data \cite{picard2001toward}.
 
 In programming courses, students solve programming problems by programming their
 proposed solution in a particular language; in order to do this, they must write the code,
 some times compile it, and finally run it to see how it works. 
 While doing this, data can be collected, all the dynamics of actually writing 
 the code in the keyboard, errors, corrections, elapsed time, number of attempts,
-compiling errors, exceptions, among others. Data mining of this data, could
+compiling errors, exceptions, among others. Data mining this could
 bring us a better understanding of the learning process, and also a better model to 
 both the selection of the appropriate content and to evaluate the learner\'s competencies.
 %But the problem is how to recognize this state so that it can be used
@@ -185,20 +187,24 @@ common in novice programmers according to the study of Bosch, D'Mello \& Mills
 four binary classifiers were compared: J-48 decision trees, k-nearest neighbour
 classifier, feed forward neural network, and a na\"ive Bayes. The output of each
 classifier determined if the student experienced the affective state during the
-exercise. The proposed method could be used in an ensemble with other sensor
-channels to improve the non-invasive recognition of the students’ affective
-states when they are working on a programming task. In order to determine what
+exercise.
+%
+% The proposed method could be used in an ensemble with other sensor
+% channels to improve the non-invasive recognition of the students’ affective
+% states when they are working on a programming task.
+%
+In order to determine what
 affective states a student was experiencing, an Experience Sampling Method (ESM)
 was used by Csikszentmihalyi \& Larson \cite{kubey1996experience}. After the students successfully
 solve a programming exercise, they are presented with an ESM survey that asks
 what they were feeling during their solving of the exercise.
 
-If a relationship could be modeled, ILEs could adapt the instruction using the
-same devices required to input the program to the computer. This could be
-important because writing programs in a computer is an important learning
-activity when learning programming. In study by Lahtinen, Ala-Mutka \& Järvinen
-\cite{lahtinen2005study} is reported that students rated ``working alone on programming
-coursework'' as a more useful situation than lectures.
+% If a relationship could be modeled, ILEs could adapt the instruction using the
+% same devices required to input the program to the computer. This could be
+% important because writing programs in a computer is an important learning
+% activity when learning programming. In study by Lahtinen, Ala-Mutka \& Järvinen
+% \cite{lahtinen2005study} is reported that students rated ``working alone on programming
+% coursework'' as a more useful situation than lectures.
 
 The structure of this work is organized as follows: next Section 
 presents a series of works related to the proposed method in this paper; Section
@@ -303,26 +309,26 @@ assess, analyse and visualize students learning computer programming. Blikstein
 employs different quantitative techniques to extract students’ behaviours and
 categorize them in terms of programming experience.
 
-\begin{figure}[h!tbp] 
-\centering 
-\includegraphics[width=0.45\textwidth]{KMDAffective.png} 
-\caption{Code Execution and Affect Recognition Architecture.}
-\label{fig_process} 
-\end{figure}
+% \begin{figure}[h!tbp] 
+% \centering 
+% \includegraphics[width=0.45\textwidth]{KMDAffective.png} 
+% \caption{Code Execution and Affect Recognition Architecture.}
+% \label{fig_process} 
+% \end{figure}
 
-Research works related to Keystroke Dynamics (KD) have been carried out by using either 
-fixed-texts or free-texts \cite{gunetti2005keystroke}.
-KD performed on fixed-texts
-involves the recognition of typing patterns when typing a pre-established fixed-
-length text, e.g., a password. In the other case, free-text KD achieves the
-recognition of typing patterns when typing a text of arbitrary-length, e.g., a
-description of an item. However, as noted by Janakiraman y Sim \cite{janakiraman2007keystroke},
-most of
-the research regarding KD is done on fixed-text input, the reason being that
-fixed-text KD usually yields better results than free-text KD. Yet, the authors
-of this work share the opinion with Janakiraman, R., and Sim, T., that it would
-be more useful if KD can handle free text as well as fixed text, this is also a
-requirement if the text is a program.
+% Research works related to Keystroke Dynamics (KD) have been carried out by using either 
+% fixed-texts or free-texts \cite{gunetti2005keystroke}.
+% KD performed on fixed-texts
+% involves the recognition of typing patterns when typing a pre-established fixed-
+% length text, e.g., a password. In the other case, free-text KD achieves the
+% recognition of typing patterns when typing a text of arbitrary-length, e.g., a
+% description of an item. However, as noted by Janakiraman y Sim \cite{janakiraman2007keystroke},
+% most of
+% the research regarding KD is done on fixed-text input, the reason being that
+% fixed-text KD usually yields better results than free-text KD. Yet, the authors
+% of this work share the opinion with Janakiraman, R., and Sim, T., that it would
+% be more useful if KD can handle free text as well as fixed text, this is also a
+% requirement if the text is a program.
 
 Although the use of KD is found in several research works
 as a biometric measure, its use for identifying affective states is rare in
@@ -409,9 +415,6 @@ in detail next.
 %   \end{tabular}
 % \end{table*}
 
-
-
-
 %\subsubsection{Capturing the Keystroke and Mouse Data} 
 While a student is trying
 to solve an exercise, a script coded in JavaScript is running in the background,
@@ -465,30 +468,30 @@ obtained from the script needs to be preprocessed to obtain a feature vector.
 Basically, this pre-processing consists in measuring the delays between key-
 down, key-up or mouse-move events triggered during an exercise.
 % These events have the dynamic shown in Figure \ref{figKD};
-For example when typing the word ‘key’ a
-user first presses the letter K and triggers the key-down event, this is
-indicated with an arrow that changes the state of the key, the time of the event
-is important and also recorded. Only the event data is received from the
-browser, in order to generate feature vectors, the patterns and rhythm users
-have when pressing consecutive keys are captured measuring the delays between
-events, as it is a common practice when dealing with keystroke dynamics. In this
-work, the definitions proposed by Sim y Janakiraman \cite{sim2007digraphs} are used. Held
-time (Ht) is defined as the time between a key-down and a key-up of the same
-key, this would be Ht(K) in the example. Inter key time (It) is defined as the
-time between two consecutive key-down events, this time could be negative is the
-second key is pressed before the first is released. A sequence is defined as a
-list of consecutive keystrokes. In the above example valid sequences could be
-[‘K’, ‘E’], [‘E’, ‘Y’] and [‘K’, ‘E’, ‘Y’], the first two are digraphs and the
-third is a trigraph. While there can be sequences of any size in a text, working
-only with digraphs and trigraphs is preferred. Even if only digraphs and
-trigraphs are considered, the amount found in free-text is too large and not
-very useful for a feature vector as noted by Epp, Lippold y Mandryk (2007) so
-they propose to use statistical measures to capture the patterns; the same
-strategy is used in this work. The averages and standard deviations are
-calculated from the delays between the events of the digraphs and trigraphs in
-each program.
-
-
+% For example when typing the word ‘key’ a
+% user first presses the letter K and triggers the key-down event, this is
+% indicated with an arrow that changes the state of the key, the time of the event
+% is important and also recorded. Only the event data is received from the
+% browser, in order to generate feature vectors, the patterns and rhythm users
+% have when pressing consecutive keys are captured measuring the delays between
+% events, as it is a common practice when dealing with keystroke dynamics. In this
+% work, the definitions proposed by Sim y Janakiraman \cite{sim2007digraphs} are used. Held
+% time (Ht) is defined as the time between a key-down and a key-up of the same
+% key, this would be Ht(K) in the example. Inter key time (It) is defined as the
+% time between two consecutive key-down events, this time could be negative is the
+% second key is pressed before the first is released. A sequence is defined as a
+% list of consecutive keystrokes. In the above example valid sequences could be
+% [‘K’, ‘E’], [‘E’, ‘Y’] and [‘K’, ‘E’, ‘Y’], the first two are digraphs and the
+% third is a trigraph. While there can be sequences of any size in a text, working
+% only with digraphs and trigraphs is preferred. Even if only digraphs and
+% trigraphs are considered, the amount found in free-text is too large and not
+% very useful for a feature vector as noted by Epp, Lippold y Mandryk (2007) so
+% they propose to use statistical measures to capture the patterns; the same
+% strategy is used in this work. The averages and standard deviations are
+% calculated from the delays between the events of the digraphs and trigraphs in
+% each program.
+%
+%
 To calculate the average and standard deviations of these key presses, the delays
 between a key-down and a key-up event of the left button clicks are used. In
 addition to these averages and standard deviations of the delays between
@@ -520,9 +523,8 @@ rational data (J-48) \cite{tan2006introduction}. Experiments and results will be
 \label{sec:exp}
 The aim of this research is to evaluate the use of keyboard
 and mouse dynamics as an appropriate sensory input for an affective recognition
-system. The context of use is a learning environment for programmers. In
-particular for learning activities consisting in writing short programs
-interactively. An experimental approach was adopted with this aim: Sensory and
+system in a learning environment for programmers,
+who interactively write short programs. An experimental approach was adopted with this aim: Sensory and
 quantitative data was collected from learners as they were enrolled in a basic
 course of Python programming. This data was then pre-processed using the method
 described earlier in Section \ref{sec:method}, and together with the quantitative data obtained from users,
@@ -546,8 +548,8 @@ A tutorial was developed to
 obtain the necessary data using the proposed platform Protoboard, a web-based environment,
 whose latest version has been released under an open source license,
 and can be found online at \url{https://github.com/mariosky/protoboard}.
-The main functionality  used for this experiment is
-shown schematically in Figure \ref{fig_process} . % Don't know what's
+%The main functionality  used for this experiment is
+%shown schematically in Figure \ref{fig_process} . % Don't know what's
                                 % happened to this figure
 Users log in to 
 Protoboard  by creating an account or by using their account credentials from the
@@ -638,7 +640,7 @@ completing each exercise was grouped in three classes: ‘Yes’, ‘Neutral’ 
 results show that the most common emotions were flow/engagement (72\%) and
 relaxation (61\%) while few learners reported distraction (5\%), frustration
 (8\%) and boredom (2\%). This distribution is different from what was reported
-by D’Mello et al. \cite{bixler2013detecting} and Rodrigo et al. \cite{rodrigo2009affective}.
+by D\'Mello et al. \cite{bixler2013detecting} and Rodrigo et al. \cite{rodrigo2009affective}.
 Although Flow/Engagement was
 also the predominant class, the distribution is skewed to the first two. There
 are some possible reasons for this; first the majority of students had
@@ -655,8 +657,7 @@ with 0.5 probability and mutation of 1/39, and a minimum feature size of 5.
   % Which one? You really have to be _way_ more
   % specific in this conference - JJ
   % donde - Mario
-In the end, the subset for the frustration classifier
-consists of 11 features, and the subset for the boredom classifier consists of
+In the end, the subset for the frustration classifier includes 11 features, and the subset for the boredom classifier consists of
 13 features.
 
 The selected classifiers where implemented using Rapid Miner, with the following parameters:
@@ -709,20 +710,20 @@ results.
 
 While these are promising results further experiments are needed. Other experiments
 should focus on novice programmers, but that is left as future
-work. This 
+work. %This 
 % But you have to comment on how this addresses the problem. Which
 % should be in the title that is not there yet - JJ
 % You also have to draw a _hard_ conclusion. Is programming using free
 % text better than what? Typing a fixed text? 
 % Is 80% effective? 
-future work will focus on extracting other features from the learners\' interaction
-such as behavioral data, as proposed by Blikstein
-\cite{blikstein2011using}; the parameters proposed by this author include the size
-of the program and changes in the code. Other authors also propose treating the use
-of certain keys as features e.g., the delete key because is manly used for correcting
-sentences. Also a multi-modal approach is needed. Since all these need
-a completely new approach, a new methodology will be developed to
-gather data and take measures.  
+% future work will focus on extracting other features from the learners\' interaction
+% such as behavioral data, as proposed by Blikstein
+% \cite{blikstein2011using}; the parameters proposed by this author include the size
+% of the program and changes in the code. Other authors also propose treating the use
+% of certain keys as features e.g., the delete key because is manly used for correcting
+% sentences. Also a multi-modal approach is needed. Since all these need
+% a completely new approach, a new methodology will be developed to
+% gather data and take measures.  
 
 % use section* for acknowledgment 
 \section*{Acknowledgment} 
