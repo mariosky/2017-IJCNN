@@ -303,12 +303,12 @@ assess, analyse and visualize students learning computer programming. Blikstein
 employs different quantitative techniques to extract students’ behaviours and
 categorize them in terms of programming experience.
 
-\begin{figure*}[h!tbp] 
+\begin{figure}[h!tbp] 
 \centering 
-\includegraphics[width=0.9\textwidth]{KMDAffective.png} 
+\includegraphics[width=0.45\textwidth]{KMDAffective.png} 
 \caption{Code Execution and Affect Recognition Architecture.}
 \label{fig_process} 
-\end{figure*}
+\end{figure}
 
 Research works related to Keystroke Dynamics (KD) have been carried out by using either 
 fixed-texts or free-texts \cite{gunetti2005keystroke}.
@@ -330,7 +330,7 @@ comparison. Epp, Lippold \& Mandryk \cite{epp2011identifying} effectively used K
 with decision-tree classifiers for the identification of 15 affective states.
 Although their work was based on fixed text, their technique to extract a feature
 vector was an inspiration for the proposed method in this work. As for free-text
-KD, Bixler y D'Mello \cite{bixler2013detecting} present a method for the identification of boredom
+KD, Bixler y D\'Mello \cite{bixler2013detecting} present a method for the identification of boredom
 and engagement based on several classification models. A similar situation exists in the case of Mouse Dynamics (MD), which is used mainly for authentication; however, Salmeron-Majadas, Santos
 and Boticario \cite{salmeron2014exploring} use both MD and KD to predict four affective states using
 five different classification algorithms. Bakhtiyari y Husain \cite{bakhtiyari2014fuzzy} discuss a
@@ -358,61 +358,61 @@ The method does not consider other sensory data, but it could be integrated with
 other sensory inputs in a multi-modal approach.  Each of the steps is explained
 in detail next.
 
-\begin{table*}[h!tb]
-\centering
-\caption{The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
-\label{tab_features}
-    \begin{tabular}{ | l |p{0.4\textwidth} || l | p{0.4\textwidth} | }
-    \hline
-    ID          & Description           & ID               & Description  \\
-    \hline
-    1 & Mean duration between 1st and 2nd down keys of the digraphs.  & 21 & Mean duration of the 2nd key of the trigraphs.\\
-    \hline
-    2 & Standard deviation of the previous feature.                   & 22 & Standard deviation of the previous feature.\\
-    \hline
-    3 & Mean duration of the 1st key of the digraphs.                 & 23 & Mean duration between 2nd key up and next key down of trigraphs.\\
-    \hline
-    4 & Standard deviation of the previous feature.                   & 24 & Standard deviation of the previous feature.\\
-    \hline
-    5 & Mean duration between 1st key up and next key down of the digraphs. & 25 & Mean duration of the third key of the trigraphs.\\
-    \hline
-    6 & Standard deviation of the previous feature. & 26 & Standard deviation of the previous feature.\\
-    \hline
-    7 & Mean duration of the 2nd key of the digraphs. & 27 & Mean duration of the trigraphs from 1st key down to last key up.\\
-    \hline
-    8 & Standard deviation of the previous feature. & 28 & Standard deviation of the previous feature.\\
-    \hline
-    9 & Mean duration of the digraphs from 1st key down to last key up. & 29 & Mean number of key events that were part of the graph.\\
-    \hline
-    10 & Standard deviation of the previous feature. & 30 & Standard deviation of the previous feature.\\
-    \hline
-    11 & Mean number of key events that were part of the graph. & 31 & Mean duration of mouse key presses.\\
-    \hline
-    12 & Standard deviation of the previous feature. & 32 & Standard deviation of the previous feature.\\
-    \hline
-    13 & Mean duration between 1st and 2nd down keys of the trigraphs. & 33 & Mean duration of all mouse movements.\\
-    \hline
-    14 & Standard deviation of the previous feature. & 34 & Standard deviation of the previous feature.\\
-   \hline
-    15 & Mean duration of the 1st key of the trigraphs. & 35 & Mean distance in pixels in the X coordinate. \\
-    \hline
-    16 & Standard deviation of the previous feature. & 36 & Standard deviation of the previous feature.\\
-    \hline
-    17 & Mean duration between 1st key up and next key down of trigraphs. & 37 & Mean distance in pixels in the Y coordinate.\\
-    \hline
-    18 & Standard deviation of the previous feature. & 38 & Standard deviation of the previous feature.\\
-    \hline
-    19 & Mean duration between 2nd and 3rd down keys of the trigraphs. & 39 & Number of attempts\\
-    \hline
-    20 & Standard deviation of the previous feature. &   &  \\
-    \hline
-  \end{tabular}
-\end{table*}
+% \begin{table*}[h!tb]
+% \centering
+% \caption{The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
+% \label{tab_features}
+%     \begin{tabular}{ | l |p{0.4\textwidth} || l | p{0.4\textwidth} | }
+%     \hline
+%     ID          & Description           & ID               & Description  \\
+%     \hline
+%     1 & Mean duration between 1st and 2nd down keys of the digraphs.  & 21 & Mean duration of the 2nd key of the trigraphs.\\
+%     \hline
+%     2 & Standard deviation of the previous feature.                   & 22 & Standard deviation of the previous feature.\\
+%     \hline
+%     3 & Mean duration of the 1st key of the digraphs.                 & 23 & Mean duration between 2nd key up and next key down of trigraphs.\\
+%     \hline
+%     4 & Standard deviation of the previous feature.                   & 24 & Standard deviation of the previous feature.\\
+%     \hline
+%     5 & Mean duration between 1st key up and next key down of the digraphs. & 25 & Mean duration of the third key of the trigraphs.\\
+%     \hline
+%     6 & Standard deviation of the previous feature. & 26 & Standard deviation of the previous feature.\\
+%     \hline
+%     7 & Mean duration of the 2nd key of the digraphs. & 27 & Mean duration of the trigraphs from 1st key down to last key up.\\
+%     \hline
+%     8 & Standard deviation of the previous feature. & 28 & Standard deviation of the previous feature.\\
+%     \hline
+%     9 & Mean duration of the digraphs from 1st key down to last key up. & 29 & Mean number of key events that were part of the graph.\\
+%     \hline
+%     10 & Standard deviation of the previous feature. & 30 & Standard deviation of the previous feature.\\
+%     \hline
+%     11 & Mean number of key events that were part of the graph. & 31 & Mean duration of mouse key presses.\\
+%     \hline
+%     12 & Standard deviation of the previous feature. & 32 & Standard deviation of the previous feature.\\
+%     \hline
+%     13 & Mean duration between 1st and 2nd down keys of the trigraphs. & 33 & Mean duration of all mouse movements.\\
+%     \hline
+%     14 & Standard deviation of the previous feature. & 34 & Standard deviation of the previous feature.\\
+%    \hline
+%     15 & Mean duration of the 1st key of the trigraphs. & 35 & Mean distance in pixels in the X coordinate. \\
+%     \hline
+%     16 & Standard deviation of the previous feature. & 36 & Standard deviation of the previous feature.\\
+%     \hline
+%     17 & Mean duration between 1st key up and next key down of trigraphs. & 37 & Mean distance in pixels in the Y coordinate.\\
+%     \hline
+%     18 & Standard deviation of the previous feature. & 38 & Standard deviation of the previous feature.\\
+%     \hline
+%     19 & Mean duration between 2nd and 3rd down keys of the trigraphs. & 39 & Number of attempts\\
+%     \hline
+%     20 & Standard deviation of the previous feature. &   &  \\
+%     \hline
+%   \end{tabular}
+% \end{table*}
 
 
 
 
-\subsubsection{Capturing the Keystroke and Mouse Data} 
+%\subsubsection{Capturing the Keystroke and Mouse Data} 
 While a student is trying
 to solve an exercise, a script coded in JavaScript is running in the background,
 which captures every keystroke, mouse movement and mouse button press. Each
@@ -442,29 +442,30 @@ based learning environment including the KD and MD functions are open source and
 available as Github repositories at \url{https://github.com/amherag/keyboard-mouse-dynamics}; the code for the
 sandbox is also available in \url{https://github.com/mariosky/sandbox}.
 
-\begin{figure*}[h!tb] 
-\centering 
-\includegraphics[width=0.9\textwidth]{editorRresult.png} 
-\caption{Web-based editor used for code evaluation. The lower panel
-  indicates (in Spanish) the tests passed successfully and the program
-  output.}
-\label{fig_editor} 
-\end{figure*}
+% \begin{figure}[h!tb] 
+% \centering 
+% \includegraphics[width=0.45\textwidth]{editorRresult.png} 
+% \caption{Web-based editor used for code evaluation. The lower panel
+%   indicates (in Spanish) the tests passed successfully and the program
+%   output.}
+% \label{fig_editor} 
+% \end{figure}
 
-\begin{figure*}[h!tb] 
-\centering 
-\includegraphics[width=0.9\textwidth]{KeyDyn.png} 
-\caption{Keystroke Dynamics, adapted from Sim \& Janakiraman \cite{sim2007digraphs}.}
-\label{figKD} 
-\end{figure*}
+% \begin{figure}[h!tb] 
+% \centering 
+% \includegraphics[width=0.45\textwidth]{KeyDyn.png} 
+% \caption{Keystroke Dynamics, adapted from Sim \& Janakiraman \cite{sim2007digraphs}.}
+% \label{figKD} 
+% \end{figure}
 
-\subsubsection{Preprocessing of the Keystroke and Mouse Data} 
+%\subsubsection{Preprocessing of the Keystroke and Mouse Data} 
 
 The raw data
 obtained from the script needs to be preprocessed to obtain a feature vector.
 Basically, this pre-processing consists in measuring the delays between key-
-down, key-up or mouse-move events triggered during an exercise. These events
-have the dynamic shown in Figure \ref{figKD}; for example when typing the word ‘key’ a
+down, key-up or mouse-move events triggered during an exercise.
+% These events have the dynamic shown in Figure \ref{figKD};
+For example when typing the word ‘key’ a
 user first presses the letter K and triggers the key-down event, this is
 indicated with an arrow that changes the state of the key, the time of the event
 is important and also recorded. Only the event data is received from the
@@ -533,13 +534,13 @@ participant while trying to solve the exercises or complete the tutorial. The
 participants were able to stop and resume their interaction with the system at
 any time.
 %
-\begin{figure*}[!t] 
+\begin{figure}[!t] 
 \centering 
-\includegraphics[width=0.9\textwidth]{Completed.png} 
-\includegraphics[width=0.9\textwidth]{classDist.png} 
-\caption{Completed activities and exercises and by learner in ascending order (left) and lass distribution of emotions as reported by learners (right).}
+\includegraphics[width=0.45\textwidth]{Completed.png} 
+\includegraphics[width=0.45\textwidth]{classDist.png} 
+\caption{Completed activities and exercises by learner in ascending order (left) and distribution of emotions reported (right).}
 \label{fig_completed} 
-\end{figure*}
+\end{figure}
 
 A tutorial was developed to
 obtain the necessary data using the proposed platform Protoboard, a web-based environment,
@@ -554,9 +555,10 @@ social network Facebook. The web tutorial begins with three introductory videos 
 the fundamentals of programming in Python, and how to use the editor to
 execute their code. What follows after these videos, are 13 programming
 exercises that students need to solve in sequential order. Exercises are of
-incremental difficulty.  In Figure \ref{fig_editor}, 
-the user interface of the programming editor is
-presented.
+incremental difficulty.
+% In Figure \ref{fig_editor}, 
+% the user interface of the programming editor is
+% presented.
 For this experiment Protoboard was configured to allow unlimited
 attempts to solve each exercise. 
 
@@ -570,30 +572,30 @@ information about the subjects. Their ages were in the range of 18 to
 web tutorial\'s course is of a very basic level, participants had
 different levels of experience, from 0 (8 persons) to more than 5 (22).
 
+% \begin{table}[!t]
+% \centering
+% \caption{ Survey question: How many years of programming experience do you have? }
+% \label{tab_results}
+%     \begin{tabular}{ | c | l | }
+%     \hline
+%     Years Programming          & Number of Learners \\
+%     \hline
+%    		0   &  8 \\
+%     \hline
+%     	1   &  13\\
+%     \hline
+%     	2-4  & 15\\
+%     \hline
+%     	5+   & 22\\
+%     \hline
+%     \end{tabular}
+
+% \end{table}
+
+
 \begin{table*}[!t]
 \centering
-\caption{ Survey question: How many years of programming experience do you have? }
-\label{tab_results}
-    \begin{tabular}{ | c | l | }
-    \hline
-    Years Programming          & Number of Learners \\
-    \hline
-   		0   &  8 \\
-    \hline
-    	1   &  13\\
-    \hline
-    	2-4  & 15\\
-    \hline
-    	5+   & 22\\
-    \hline
-    \end{tabular}
-
-\end{table*}
-
-
-\begin{table*}[!t]
-\centering
-\caption{Performance of the each of the classifiers with 10-fold cross validation. Accuracy ($\kappa$) }
+\caption{Performance of every classifier with 10-fold cross validation. Accuracy ($\kappa$) }
 \label{tab_performance}
     \begin{tabular}{ | c | l | l | l | l | }
     \hline
