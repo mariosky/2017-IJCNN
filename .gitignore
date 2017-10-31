@@ -205,3 +205,6 @@ TSWLatexianTemp*
 
 # zip
 *.zip
+
+# emacs
+*~
