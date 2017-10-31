@@ -101,3 +101,8 @@ section[data-background] blockquote {
   left: 1em;
   font-size: 0.5em;
 }
+
+.flat {
+    max-height: 99%;
+    max-width: 99%;
+}
