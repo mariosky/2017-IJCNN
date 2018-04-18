@@ -80,12 +80,9 @@ individual\'s affective states.}
 \onecolumn \maketitle \normalsize \vfill
 
 \section{Introduction}
-
-Introductory programming courses are
-generally regarded as difficult \cite{robins2003learning, lahtinen2005study}
+Programming courses are often regarded as difficult \cite{robins2003learning, lahtinen2005study}
 and there is a common conception that they often have a high
-failure rate \cite{bennedsen2007failure}. Jenkins \cite{jenkins2001motivation} argues that there
-are multiple factors involved in this lack of success:
+failure rate \cite{bennedsen2007failure}. Jenkins \cite{jenkins2001motivation} argues that this lack of success has multiple factors:
 \begin{itemize}
 \item There is a deep relation with the expectations, attitudes,
 and previous experiences of the teaching staff and students.
@@ -97,40 +94,46 @@ are at their first year of university which means they are tackling a totally
 new topic that does not respond to their habitual study approaches.
 \end{itemize}
 
-On the other hand, Dijkstra \cite{dijkstra1989cruelty} argues that the subject of programming is very
-problem-solving intensive, which means that a high precision is required because even the
-slightest perturbation can render a program totally worthless. These
-difficulties often frustrate students.
-Jenkins \cite{jenkins2001motivation, jenkins2002difficulty} notes that many
-students expect the course to be difficult and come with the notion that they
-will have to struggle, others may have a stereotyped image of a programmer,
-these beliefs can negatively affect their initial motivation. During the course,
-novice programmers experience many emotions, for instance frustration and
+Dijkstra \cite{dijkstra1989cruelty} argues that the subject of programming is
+very problem-solving intensive, which means that a high precision is required
+because even the slightest perturbation can render a program totally worthless.
+These difficulties often frustrate novice students. Instructors move to explain
+more advanced subjects, while a group of students is still struggling with
+basic syntax.
+Again Jenkins \cite{jenkins2001motivation, jenkins2002difficulty} notes that
+many students expect the course to be difficult and come with the notion that
+they will have to struggle, others may have a stereotyped image of a programmer,
+these beliefs can negatively affect their initial motivation and expectations.
+During the course, novice programmers experience many emotions,
+for instance frustration and
 confusion when they cannot find a bug in a program, but also joy when they
 successfully run a challenging program for the first time. They can also become
-bored if they found the assignments too repetitive or too easy. Learning to
-program is a difficult task, where emotions play a significant role. Research
-has gone far to understand the role of emotion in learning, both in the process
-and the outcome; for instance, in e-learning  \cite{kort2001affective, rossin2009effects}
-and in programming  \cite{rodrigo2009affective, jenkins2001motivation ,
-bosch2013emotions, khan2007mood}.
+bored if they found the assignments too repetitive or too easy.
 
-In these works the emotion of flow/engagement is regarded as the ideal affective state in which
+Learning to program is a difficult task, where emotions play a significant
+role. Research has gone far to understand the role of emotion in learning, both
+in the process and the outcome; for instance, in e-learning
+\cite{kort2001affective, rossin2009effects}
+and in programming  \cite{rodrigo2009affective, jenkins2001motivation ,
+bosch2013emotions, khan2007mood}. In these works the emotion of flow/engagement
+is regarded as the ideal affective state in which
 students tend to be most capable of acquiring meaningful information through the
 learning process. Flow is defined by Csikszentmihalyi \cite{csikszentmihalyi1990flow}
-as a mental state in which a person performing an activity is fully immersed in a feeling of
-energized focus, full involvement, and enjoyment. Engagement is also a positive
-affect where students are thought to be more involved behaviorally,
-intellectually, and emotionally in their learning tasks \cite{bangert2002teacher}.
+as a mental state in which a person performing an activity is fully immersed in a feeling of energized focus, full involvement, and enjoyment. Engagement is
+also a positive affect where students are thought to be more involved
+behaviorally, intellectually, and emotionally in their learning tasks
+\cite{bangert2002teacher}.
 
-In order to promote engagement, instruction is designed with the
-objective of assigning learning activities
-that result challenging to students, but not much as to frustrate them. For
-this, experienced instructors gauge a student\'s affective state and then assign
-an activity with the appropriate level of difficulty. However, recognition of
-emotions is a difficult task, even
+In order to promote engagement, sometimes instruction is designed with the
+objective of creating learning activities that are challenging to students, but
+not much as to frustrate them. Engagement is not only achieved through the
+design of single learning activities but also on the appropiate selection and
+sequence in which they are presented.
+For this, experienced instructors gauge a student\'s affective state and then
+assign an activity with the appropriate level of difficulty. However,
+recognition of emotions is a difficult task, even
 for humans. Instructors often use their social intelligence to recognize
-students\'' affective states. In class a good instructor habitually reads the
+students\'' affective states. In class, an instructor habitually reads the
 faces of students in the classroom to see if they are confused, bored or
 engaged; then decides what to do next. Interactive Learning Environments (ILEs)
 can be enhanced if they can offer an
@@ -148,15 +151,21 @@ intrusive or invasive, and can disrupt the student\'s learning experience
  Other sensors such as video cameras can also be considered invasive, since they always transmit the
  identity, appearance and behavior along with emotional data \cite{picard2001toward}.
 
-In programming courses, students solve programming problems by programming their
-proposed solution in a particular language; in order to do this, they must write the code,
-some times compile it, and finally run it to see how it works.
-While doing this, data can be collected, all the dynamics of actually writing
-the code in the keyboard, errors, corrections, elapsed time, number of attempts,
-compiling errors, exceptions, among others. Data mining this could
-bring us a better understanding of the learning process, and also a better model to
-both the selection of the appropriate content and to evaluate the learner\'s competencies.
-% But the problem is how to recognize this state so that it can be used
+In programming courses, students solve programming problems by implementing
+their proposed solution in a particular language; in order to do this, they
+must write the code,
+some times compile it, to finally run it to see how it works. This cycle is
+often repeated many times, and studens can change their affective state
+accordingly.
+Data can be collected, while students are working on their assignments.
+All the dynamics of actually writing the code using the keyboard for instance
+the syntax errors they received from the compiler or interpreter, the
+corrections they tried, the elapsed time of each step, the number of attempts,
+compiling errors, exceptions, among others. Data mining of all these data could
+bring us a better understanding of the learning process, and also a better
+model to both the selection of the appropriate content and to evaluate the
+learner\'s competencies. But the problem that remains is to how to recognize
+the student's affective state so that it can be used by an adaptive system.
 % to (select appropriate content| give grades| whatever ) - JJ
 % I highlited the Data Ming task for the track, and that there are other options
 % for Data Analytics
@@ -174,18 +183,11 @@ execercises.
 % advance from it - JJ
 In order to test the correlation of keyboard and mouse dynamics and an
 affective state when programming, an interactive web-based
-programming platform is proposed. The platform is designed to collect
-keyboard and mouse data from the students\' interaction for data analysis.
-The proposed method has three main components: a JavaScript library to capture keyboard and mouse
-dynamics from a browser-based editor, a pre-processing step whose output is a
-feature vector that is sent to the third component, a classification algorithm.
+programming platform has been proposed \cite{ijcci17}.
+The platform is designed to collect keyboard and mouse data from the students\' interaction for data analysis. The proposed method has three main components: a JavaScript library to capture keyboard and mouse dynamics from a browser-based editor, a pre-processing step whose output is a feature vector that is sent to a third component, the classification algorithm.
+
 An experiment was conducted where students solved a series of programming
-assignments using the web based learning environment. Using only the data from the
-student\'s keyboard and mouse dynamics six affective states where recognized for
-each of the attempts at solving the assignments. Results obtained from the
-experiment are promising. The affective states recognized include the most
-common in novice programmers according to the study of Bosch, D'Mello \& Mills
-\cite{bixler2013detecting}: boredom, engagement/flow, confusion and frustration. For this experiment
+assignments using the web based learning environment. Using only the data from the student\'s keyboard and mouse dynamics six affective states where recognized for each of the attempts at solving the assignments. Results obtained from the experiment are promising. The affective states recognized include the most common in novice programmers according to the study of Bosch, D'Mello \& Mills \cite{bixler2013detecting}: boredom, engagement/flow, confusion and frustration. For this experiment
 four binary classifiers were compared: J-48 decision trees, k-nearest neighbour
 classifier, feed forward neural network, and a na\"ive Bayes. The output of each
 classifier determined if the student experienced the affective state during the
