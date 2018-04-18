@@ -50,29 +50,31 @@
     \email{\tt jmerelo@ugr.es}}
 }
 
-\keywords{Affective computing, neural networks, learning analytics}
+\keywords{Affective computing, neural networks, machine learning}
 
-\abstract{Learning to program is often regarded as a difficult task. When
-selecting an appropriate programming assignment, experienced instructors
-gauge a student\'s affective state and skills to then assign an
-activity with the appropriate level of difficulty. This work is
-focused on the prediction of the affective states of programmers with
-different levels of expertise when learning a new programming
-language. For this, an interactive web-based programming platform is
-proposed. The platform is designed to collect data from the students\'
-interaction for data analysis. Current work is focused on the
-prediction of affective states using non-obtrusive
-sensors. Specifically, the aim of this research is to evaluate the use
-of keyboard and mouse dynamics as an appropriate sensory input for an
-affective recognition system. The proposed method uses feature vectors
-obtained by mining data generated from both keyboard and mouse
-dynamics of students as they work in basic Python programming
-assignments, which were used to train different classification
-algorithms to classify learners into five different affective states:
-boredom, frustration, distraction, relaxation and engagement. Accuracy
-achieved was around 75\% with J48 obtaining the best results, proving
-that data gathered from non-obtrusive sensors can successfully be used
-as another input to classification models in order to predict an
+\abstract{
+When choosing from a collection of programming assignments, instructors must
+gauge the student\'s affective state and skills to select a learning resource
+with the appropriate level of difficulty. This work is
+focused on capturing and pre-processing of data for the evaluation of several
+machine learning techniques aim at classifing the affective
+states of users with different levels of expertise
+when learning a new programming language.
+Currently, web-based platform is applied to collect data from the students\'
+interactions whith programming excersises. The aim of this research is to
+evaluate the use of keyboard and mouse dynamics as an appropriate
+non-obtrusive sensory input for an affective aware system.
+Feature vectors were obtained by pre-processing
+data from keyboard and mouse dynamics captured from students as
+they were coding basic Python programming assignments.
+Feature vectors were used for the classification of five affective states:
+boredom, frustration, distraction, relaxation and engagement.
+The following classification algorithms have been evaluated: k -nearest
+neighbors,feed forward neural networks, na\"ive Bayes classifier and the J-48
+tree indiction algorithm). The best accuracy was around 75\% and was achieved
+by the J-48 algorithm. Results show that data gathered from ready-available,
+non-obtrusive sensors can be used successfully
+as another input to hyebrid classification models in order to predict an
 individual\'s affective states.}
 
 \onecolumn \maketitle \normalsize \vfill
