@@ -46,7 +46,7 @@
 \author{\authorname{Mario Garcia Valdez\sup{1}, Amaury Hernandez Aguila\sup{1},
   Juan-J. Merelo\sup{2} and Alejandra Mancilla Soto\sup{1}}
 \affiliation{ Dept. of Graduate Studies, Instituto Tecnologico de Tijuana (Mexico),  \email{\tt \(mario,amherag,alejandra.mancilla\)@tectijuana.edu.mx}}
-\affiliation{Geneura Team and CITIC, University of Granada (Spain), 
+\affiliation{Geneura Team and CITIC, University of Granada (Spain),
     \email{\tt jmerelo@ugr.es}}
 }
 
@@ -80,25 +80,25 @@ individual\'s affective states.}
 \section{Introduction}
 
 Introductory programming courses are
-generally regarded as difficult \cite{robins2003learning, lahtinen2005study} 
+generally regarded as difficult \cite{robins2003learning, lahtinen2005study}
 and there is a common conception that they often have a high
-failure rate \cite{bennedsen2007failure}. Jenkins \cite{jenkins2001motivation} argues that there 
-are multiple factors involved in this lack of success: 
+failure rate \cite{bennedsen2007failure}. Jenkins \cite{jenkins2001motivation} argues that there
+are multiple factors involved in this lack of success:
 \begin{itemize}
-\item There is a deep relation with the expectations, attitudes, 
-and previous experiences of the teaching staff and students. 
-\item The nature of the subject that involves the 
+\item There is a deep relation with the expectations, attitudes,
+and previous experiences of the teaching staff and students.
+\item The nature of the subject that involves the
 learning of new abstract constructs, syntax and tools.
-\item Groups are often heterogeneous and thus it is difficult to design courses 
-that are beneficial for everyone. Many students begin to program when they 
+\item Groups are often heterogeneous and thus it is difficult to design courses
+that are beneficial for everyone. Many students begin to program when they
 are at their first year of university which means they are tackling a totally
-new topic that does not respond to their habitual study approaches. 
+new topic that does not respond to their habitual study approaches.
 \end{itemize}
 
 On the other hand, Dijkstra \cite{dijkstra1989cruelty} argues that the subject of programming is very
 problem-solving intensive, which means that a high precision is required because even the
 slightest perturbation can render a program totally worthless. These
-difficulties often frustrate students. 
+difficulties often frustrate students.
 Jenkins \cite{jenkins2001motivation, jenkins2002difficulty} notes that many
 students expect the course to be difficult and come with the notion that they
 will have to struggle, others may have a stereotyped image of a programmer,
@@ -125,7 +125,7 @@ In order to promote engagement, instruction is designed with the
 objective of assigning learning activities
 that result challenging to students, but not much as to frustrate them. For
 this, experienced instructors gauge a student\'s affective state and then assign
-an activity with the appropriate level of difficulty. However, recognition of 
+an activity with the appropriate level of difficulty. However, recognition of
 emotions is a difficult task, even
 for humans. Instructors often use their social intelligence to recognize
 students\'' affective states. In class a good instructor habitually reads the
@@ -136,42 +136,42 @@ automatic perception of emotions. The recognition and simulation of human
 affects are becoming important fields of study, and many researchers have
 demonstrated that affect-aware computers can provide a better performance in assisting
 humans \cite{picard2001toward}. When ILEs embrace these methodologies and techniques a
-problem arises. Sensors must be used to gather data, in order to perform the 
+problem arises. Sensors must be used to gather data, in order to perform the
 recognition of users\' affective states.
-%Some sensors rely on physiological readings
-%and must be in physical contact with students.
-% These sensors can be considered
-% intrusive or invasive, and can disrupt the student\'s learning experience 
-% \cite{zhai2008stress, sidney2005integrating, arroyo2009emotion}.
-% Other sensors such as video cameras can also be considered invasive, since they always transmit the
-% identity, appearance and behavior along with emotional data \cite{picard2001toward}.
+Some sensors rely on physiological readings
+and must be in physical contact with students.
+These sensors can be considered
+intrusive or invasive, and can disrupt the student\'s learning experience
+\cite{zhai2008stress, sidney2005integrating, arroyo2009emotion}.
+ Other sensors such as video cameras can also be considered invasive, since they always transmit the
+ identity, appearance and behavior along with emotional data \cite{picard2001toward}.
 
 In programming courses, students solve programming problems by programming their
 proposed solution in a particular language; in order to do this, they must write the code,
-some times compile it, and finally run it to see how it works. 
-While doing this, data can be collected, all the dynamics of actually writing 
+some times compile it, and finally run it to see how it works.
+While doing this, data can be collected, all the dynamics of actually writing
 the code in the keyboard, errors, corrections, elapsed time, number of attempts,
 compiling errors, exceptions, among others. Data mining this could
-bring us a better understanding of the learning process, and also a better model to 
+bring us a better understanding of the learning process, and also a better model to
 both the selection of the appropriate content and to evaluate the learner\'s competencies.
-%But the problem is how to recognize this state so that it can be used
-%to (select appropriate content| give grades| whatever ) - JJ
+% But the problem is how to recognize this state so that it can be used
+% to (select appropriate content| give grades| whatever ) - JJ
 % I highlited the Data Ming task for the track, and that there are other options
-% for Data Analytics   
+% for Data Analytics
 In this work, a method for the recognition of affective states through the
-mining of keystroke and mouse dynamics data is proposed. 
-The hypothesis is that students can vary the dynamic of keystrokes according 
-to their affective state when programming. A correlation of the 
-user\'s interactions (keyboard and mouse) with an emotional state, has been 
+mining of keystroke and mouse dynamics data is proposed.
+The hypothesis is that students can vary the dynamic of keystrokes according
+to their affective state when programming. A correlation of the
+user\'s interactions (keyboard and mouse) with an emotional state, has been
 established in the preliminary work by Zimmermann
 et al. \cite{zimmermann2003affective}, but the work experiments where
 conducted by asking users to write a predefined message, not programming
-execercises. 
+execercises.
 % since Bosch or whatever has already proved that this is possible (or
 % whatever) --> Establish the state of the art and how you plan to
 % advance from it - JJ
 In order to test the correlation of keyboard and mouse dynamics and an
-affective state when programming, an interactive web-based 
+affective state when programming, an interactive web-based
 programming platform is proposed. The platform is designed to collect
 keyboard and mouse data from the students\' interaction for data analysis.
 The proposed method has three main components: a JavaScript library to capture keyboard and mouse
@@ -188,32 +188,29 @@ four binary classifiers were compared: J-48 decision trees, k-nearest neighbour
 classifier, feed forward neural network, and a na\"ive Bayes. The output of each
 classifier determined if the student experienced the affective state during the
 assignment.
-%
-% The proposed method could be used in an ensemble with other sensor
-% channels to improve the non-invasive recognition of the students’ affective
-% states when they are working on a programming task.
-%
+The proposed method could be used in an ensemble with other sensor
+channels to improve the non-invasive recognition of the students’ affective
+states when they are working on a programming task.
 In order to determine what
 affective states a student was experiencing, an Experience Sampling Method (ESM)
 was used by Csikszentmihalyi \& Larson \cite{kubey1996experience}. After the students successfully
 solve a programming assignment, they are presented with an ESM survey that asks
 what they were feeling during their solving of the assignment.
 
-% If a relationship could be modeled, ILEs could adapt the instruction using the
-% same devices required to input the program to the computer. This could be
-% important because writing programs in a computer is an important learning
-% activity when learning programming. In study by Lahtinen, Ala-Mutka \& Järvinen
-% \cite{lahtinen2005study} is reported that students rated ``working alone on programming
-% coursework'' as a more useful situation than lectures.
+If a relationship could be modeled, ILEs could adapt the instruction using the
+same devices required to input the program to the computer. This could be
+important because writing programs in a computer is an important learning
+activity when learning programming. In study by Lahtinen, Ala-Mutka \& Järvinen
+\cite{lahtinen2005study} is reported that students rated ``working alone on programming coursework'' as a more useful situation than lectures.
 
-The structure of this work is organized as follows: next Section 
+The structure of this work is organized as follows: next Section
 presents a series of works related to the proposed method in this paper; Section
 \ref{sec:method} describes the proposed method for the recognition of affective
 states in a web based learning environment for the teaching of programming
 languages; next in Section \ref{sec:exp} we explain the experimental evaluation of the
 proposed method and results.
 Finally, we draw some conclusions about our methodology and
-experiments. 
+experiments.
 
 
 \section{Related Work}
@@ -257,7 +254,7 @@ situation, Steve would show distress or fear. Also in a virtual environment the
 work of McQuiggan, Robison \& Lester \cite{mcquiggan2010affective} extends this line of research by
 investigating the affective transitions that occur throughout narrative-centered
 learning experiences. The analysis of affective state transitions in this work
-replicated the findings by D’Mello et al. \cite{d2008autotutor} and Baker et al. 
+replicated the findings by D’Mello et al. \cite{d2008autotutor} and Baker et al.
 \cite{rodrigo2009affective} where
 also engagement/flow dominated self-reported affect. For outdoor environments
 Shen, Wang \& Shen \cite{shen2009affective} augment a pervasive e-learning platform with affective
@@ -273,12 +270,12 @@ need to be targeted in order to obtain less biased data. Similar to
 the previous work, Rodrigo et al., \cite{rodrigo2009affective} observed which affective states and
 behaviors relate to student\'s achievement within a basic computer science
 course. The authors found that confusion, boredom and engagement in IDE-related
-(on-task) conversation are associated with lower achievement. Measuring mood is important, 
+(on-task) conversation are associated with lower achievement. Measuring mood is important,
 since it may have an impact on programmer\'s performance according
 to Khan, Hierons y Brinkman \cite{khan2007mood}. It may be possible to detect moods
 on the basis of information regarding the programmer\'s use of the keyboard and
 mouse, and to integrate them into development environments that can improve
-programmer performance. 
+programmer performance.
 
 There has been very little research reported on the effectiveness of the use of
 keyboard and mouse dynamics as a sensory channel for affective recognition, and
@@ -303,32 +300,31 @@ the behaviour of programmers, which are not directly concerned with affective
 states but are nevertheless important to their performance. Eye tracking in
 computing education is proposed in the work Busjahn et al., \cite{busjahn2014eye}, and it is
 also used for assessing learner´s comprehension of C++ and Python programs in
-Turner et al., \cite{turner2014eye}. Blikstein \cite{blikstein2011using} proposed 
+Turner et al., \cite{turner2014eye}. Blikstein \cite{blikstein2011using} proposed
 an automated technique to
 assess, analyse and visualize students learning computer programming. Blikstein
 employs different quantitative techniques to extract students’ behaviours and
 categorize them in terms of programming experience.
 
-% \begin{figure}[h!tbp] 
-% \centering 
-% \includegraphics[width=0.45\textwidth]{KMDAffective.png} 
-% \caption{Code Execution and Affect Recognition Architecture.}
-% \label{fig_process} 
-% \end{figure}
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=0.45\textwidth]{KMDAffective.png}
+\caption{Code Execution and Affect Recognition Architecture.}
+\label{fig_process}
+\end{figure}
 
-% Research works related to Keystroke Dynamics (KD) have been carried out by using either 
-% fixed-texts or free-texts \cite{gunetti2005keystroke}.
-% KD performed on fixed-texts
-% involves the recognition of typing patterns when typing a pre-established fixed-
-% length text, e.g., a password. In the other case, free-text KD achieves the
-% recognition of typing patterns when typing a text of arbitrary-length, e.g., a
-% description of an item. However, as noted by Janakiraman y Sim \cite{janakiraman2007keystroke},
-% most of
-% the research regarding KD is done on fixed-text input, the reason being that
-% fixed-text KD usually yields better results than free-text KD. Yet, the authors
-% of this work share the opinion with Janakiraman, R., and Sim, T., that it would
-% be more useful if KD can handle free text as well as fixed text, this is also a
-% requirement if the text is a program.
+Research works related to Keystroke Dynamics (KD) have been carried out by using either
+fixed-texts or free-texts \cite{gunetti2005keystroke}.
+KD performed on fixed-texts
+involves the recognition of typing patterns when typing a pre-established fixed-
+length text, e.g., a password. In the other case, free-text KD achieves the
+recognition of typing patterns when typing a text of arbitrary-length, e.g., a
+description of an item. However, as noted by Janakiraman y Sim \cite{janakiraman2007keystroke}, most of
+the research regarding KD is done on fixed-text input, the reason being that
+fixed-text KD usually yields better results than free-text KD. Yet, the authors
+of this work share the opinion with Janakiraman, R., and Sim, T., that it would
+ be more useful if KD can handle free text as well as fixed text, this is also a
+ requirement if the text is a program.
 
 Although the use of KD is found in several research works
 as a biometric measure, its use for identifying affective states is rare in
@@ -364,58 +360,58 @@ The method does not consider other sensory data, but it could be integrated with
 other sensory inputs in a multi-modal approach.  Each of the steps is explained
 in detail next.
 
-% \begin{table*}[h!tb]
-% \centering
-% \caption{The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
-% \label{tab_features}
-%     \begin{tabular}{ | l |p{0.4\textwidth} || l | p{0.4\textwidth} | }
-%     \hline
-%     ID          & Description           & ID               & Description  \\
-%     \hline
-%     1 & Mean duration between 1st and 2nd down keys of the digraphs.  & 21 & Mean duration of the 2nd key of the trigraphs.\\
-%     \hline
-%     2 & Standard deviation of the previous feature.                   & 22 & Standard deviation of the previous feature.\\
-%     \hline
-%     3 & Mean duration of the 1st key of the digraphs.                 & 23 & Mean duration between 2nd key up and next key down of trigraphs.\\
-%     \hline
-%     4 & Standard deviation of the previous feature.                   & 24 & Standard deviation of the previous feature.\\
-%     \hline
-%     5 & Mean duration between 1st key up and next key down of the digraphs. & 25 & Mean duration of the third key of the trigraphs.\\
-%     \hline
-%     6 & Standard deviation of the previous feature. & 26 & Standard deviation of the previous feature.\\
-%     \hline
-%     7 & Mean duration of the 2nd key of the digraphs. & 27 & Mean duration of the trigraphs from 1st key down to last key up.\\
-%     \hline
-%     8 & Standard deviation of the previous feature. & 28 & Standard deviation of the previous feature.\\
-%     \hline
-%     9 & Mean duration of the digraphs from 1st key down to last key up. & 29 & Mean number of key events that were part of the graph.\\
-%     \hline
-%     10 & Standard deviation of the previous feature. & 30 & Standard deviation of the previous feature.\\
-%     \hline
-%     11 & Mean number of key events that were part of the graph. & 31 & Mean duration of mouse key presses.\\
-%     \hline
-%     12 & Standard deviation of the previous feature. & 32 & Standard deviation of the previous feature.\\
-%     \hline
-%     13 & Mean duration between 1st and 2nd down keys of the trigraphs. & 33 & Mean duration of all mouse movements.\\
-%     \hline
-%     14 & Standard deviation of the previous feature. & 34 & Standard deviation of the previous feature.\\
-%    \hline
-%     15 & Mean duration of the 1st key of the trigraphs. & 35 & Mean distance in pixels in the X coordinate. \\
-%     \hline
-%     16 & Standard deviation of the previous feature. & 36 & Standard deviation of the previous feature.\\
-%     \hline
-%     17 & Mean duration between 1st key up and next key down of trigraphs. & 37 & Mean distance in pixels in the Y coordinate.\\
-%     \hline
-%     18 & Standard deviation of the previous feature. & 38 & Standard deviation of the previous feature.\\
-%     \hline
-%     19 & Mean duration between 2nd and 3rd down keys of the trigraphs. & 39 & Number of attempts\\
-%     \hline
-%     20 & Standard deviation of the previous feature. &   &  \\
-%     \hline
-%   \end{tabular}
-% \end{table*}
+\begin{table*}[h!tb]
+\centering
+\caption{The components of the feature vector; adapted from Epp, Lippold \& Mandryk \cite{epp2011identifying}.}
+\label{tab_features}
+    \begin{tabular}{ | l |p{0.4\textwidth} || l | p{0.4\textwidth} | }
+    \hline
+    ID          & Description           & ID               & Description  \\
+    \hline
+    1 & Mean duration between 1st and 2nd down keys of the digraphs.  & 21 & Mean duration of the 2nd key of the trigraphs.\\
+    \hline
+    2 & Standard deviation of the previous feature.                   & 22 & Standard deviation of the previous feature.\\
+    \hline
+    3 & Mean duration of the 1st key of the digraphs.                 & 23 & Mean duration between 2nd key up and next key down of trigraphs.\\
+    \hline
+    4 & Standard deviation of the previous feature.                   & 24 & Standard deviation of the previous feature.\\
+    \hline
+    5 & Mean duration between 1st key up and next key down of the digraphs. & 25 & Mean duration of the third key of the trigraphs.\\
+    \hline
+    6 & Standard deviation of the previous feature. & 26 & Standard deviation of the previous feature.\\
+    \hline
+    7 & Mean duration of the 2nd key of the digraphs. & 27 & Mean duration of the trigraphs from 1st key down to last key up.\\
+    \hline
+    8 & Standard deviation of the previous feature. & 28 & Standard deviation of the previous feature.\\
+    \hline
+    9 & Mean duration of the digraphs from 1st key down to last key up. & 29 & Mean number of key events that were part of the graph.\\
+    \hline
+    10 & Standard deviation of the previous feature. & 30 & Standard deviation of the previous feature.\\
+    \hline
+    11 & Mean number of key events that were part of the graph. & 31 & Mean duration of mouse key presses.\\
+    \hline
+    12 & Standard deviation of the previous feature. & 32 & Standard deviation of the previous feature.\\
+    \hline
+    13 & Mean duration between 1st and 2nd down keys of the trigraphs. & 33 & Mean duration of all mouse movements.\\
+    \hline
+    14 & Standard deviation of the previous feature. & 34 & Standard deviation of the previous feature.\\
+   \hline
+    15 & Mean duration of the 1st key of the trigraphs. & 35 & Mean distance in pixels in the X coordinate. \\
+    \hline
+    16 & Standard deviation of the previous feature. & 36 & Standard deviation of the previous feature.\\
+    \hline
+    17 & Mean duration between 1st key up and next key down of trigraphs. & 37 & Mean distance in pixels in the Y coordinate.\\
+    \hline
+    18 & Standard deviation of the previous feature. & 38 & Standard deviation of the previous feature.\\
+    \hline
+    19 & Mean duration between 2nd and 3rd down keys of the trigraphs. & 39 & Number of attempts\\
+    \hline
+    20 & Standard deviation of the previous feature. &   &  \\
+    \hline
+  \end{tabular}
+\end{table*}
 
-%\subsubsection{Capturing the Keystroke and Mouse Data} 
+\subsubsection{Capturing the Keystroke and Mouse Data}
 While a student is trying
 to solve an assignment, a script coded in JavaScript is running in the background,
 which captures every keystroke, mouse movement and mouse button press. Each
@@ -445,53 +441,53 @@ based learning environment including the KD and MD functions are open source and
 available as Github repositories at \url{https://github.com/amherag/keyboard-mouse-dynamics}; the code for the
 sandbox is also available in \url{https://github.com/mariosky/sandbox}.
 
-% \begin{figure}[h!tb] 
-% \centering 
-% \includegraphics[width=0.45\textwidth]{editorRresult.png} 
-% \caption{Web-based editor used for code evaluation. The lower panel
-%   indicates (in Spanish) the tests passed successfully and the program
-%   output.}
-% \label{fig_editor} 
-% \end{figure}
+\begin{figure}[h!tb]
+\centering
+\includegraphics[width=0.45\textwidth]{editorRresult.png}
+\caption{Web-based editor used for code evaluation. The lower panel
+  indicates (in Spanish) the tests passed successfully and the program
+  output.}
+\label{fig_editor}
+\end{figure}
 
-% \begin{figure}[h!tb] 
-% \centering 
-% \includegraphics[width=0.45\textwidth]{KeyDyn.png} 
-% \caption{Keystroke Dynamics, adapted from Sim \& Janakiraman \cite{sim2007digraphs}.}
-% \label{figKD} 
-% \end{figure}
+\begin{figure}[h!tb]
+\centering
+\includegraphics[width=0.45\textwidth]{KeyDyn.png}
+\caption{Keystroke Dynamics, adapted from Sim \& Janakiraman \cite{sim2007digraphs}.}
+\label{figKD}
+\end{figure}
 
-%\subsubsection{Preprocessing of the Keystroke and Mouse Data} 
+\subsubsection{Preprocessing of the Keystroke and Mouse Data}
 
 The raw data
 obtained from the script needs to be preprocessed to obtain a feature vector.
 Basically, this pre-processing consists in measuring the delays between key-
 down, key-up or mouse-move events triggered during an assignment.
-% These events have the dynamic shown in Figure \ref{figKD};
-% For example when typing the word ‘key’ a
-% user first presses the letter K and triggers the key-down event, this is
-% indicated with an arrow that changes the state of the key, the time of the event
-% is important and also recorded. Only the event data is received from the
-% browser, in order to generate feature vectors, the patterns and rhythm users
-% have when pressing consecutive keys are captured measuring the delays between
-% events, as it is a common practice when dealing with keystroke dynamics. In this
-% work, the definitions proposed by Sim y Janakiraman \cite{sim2007digraphs} are used. Held
-% time (Ht) is defined as the time between a key-down and a key-up of the same
-% key, this would be Ht(K) in the example. Inter key time (It) is defined as the
-% time between two consecutive key-down events, this time could be negative is the
-% second key is pressed before the first is released. A sequence is defined as a
-% list of consecutive keystrokes. In the above example valid sequences could be
-% [‘K’, ‘E’], [‘E’, ‘Y’] and [‘K’, ‘E’, ‘Y’], the first two are digraphs and the
-% third is a trigraph. While there can be sequences of any size in a text, working
-% only with digraphs and trigraphs is preferred. Even if only digraphs and
-% trigraphs are considered, the amount found in free-text is too large and not
-% very useful for a feature vector as noted by Epp, Lippold y Mandryk (2007) so
-% they propose to use statistical measures to capture the patterns; the same
-% strategy is used in this work. The averages and standard deviations are
-% calculated from the delays between the events of the digraphs and trigraphs in
-% each program.
-%
-%
+These events have the dynamic shown in Figure \ref{figKD};
+For example when typing the word ‘key’ a
+user first presses the letter K and triggers the key-down event, this is
+indicated with an arrow that changes the state of the key, the time of the event
+is important and also recorded. Only the event data is received from the
+browser, in order to generate feature vectors, the patterns and rhythm users
+have when pressing consecutive keys are captured measuring the delays between
+events, as it is a common practice when dealing with keystroke dynamics. In this
+work, the definitions proposed by Sim y Janakiraman \cite{sim2007digraphs} are used. Held
+time (Ht) is defined as the time between a key-down and a key-up of the same
+key, this would be Ht(K) in the example. Inter key time (It) is defined as the
+time between two consecutive key-down events, this time could be negative is the
+second key is pressed before the first is released. A sequence is defined as a
+list of consecutive keystrokes. In the above example valid sequences could be
+[‘K’, ‘E’], [‘E’, ‘Y’] and [‘K’, ‘E’, ‘Y’], the first two are digraphs and the
+third is a trigraph. While there can be sequences of any size in a text, working
+only with digraphs and trigraphs is preferred. Even if only digraphs and
+trigraphs are considered, the amount found in free-text is too large and not
+very useful for a feature vector as noted by Epp, Lippold y Mandryk (2007) so
+they propose to use statistical measures to capture the patterns; the same
+strategy is used in this work. The averages and standard deviations are
+calculated from the delays between the events of the digraphs and trigraphs in
+each program.
+
+
 To calculate the average and standard deviations of these key presses, the delays
 between a key-down and a key-up event of the left button clicks are used. In
 addition to these averages and standard deviations of the delays between
@@ -517,7 +513,7 @@ recognition have used a wide variety of classification algorithms. As a proof of
 concept four well known classification algorithms where compared: k-Nearest
 Neighbors (k-NN) algorithm, a feed forward neural network trained with back-
 propagation, a na\"ive Bayes classifier and finally a decision trees algorithm for
-rational data (J-48) \cite{tan2006introduction}. Experiments and results will be presented next. 
+rational data (J-48) \cite{tan2006introduction}. Experiments and results will be presented next.
 
 \section{Experiment and results}
 \label{sec:exp}
@@ -536,12 +532,12 @@ participant while trying to solve the assignments or complete the tutorial. The
 participants were able to stop and resume their interaction with the system at
 any time.
 %
-\begin{figure}[!t] 
-\centering 
-\includegraphics[width=0.45\textwidth]{Completed.png} 
-\includegraphics[width=0.45\textwidth]{classDist.png} 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.45\textwidth]{Completed.png}
+\includegraphics[width=0.45\textwidth]{classDist.png}
 \caption{Completed activities and assignments by learner in ascending order (left) and distribution of emotions reported (right).}
-\label{fig_completed} 
+\label{fig_completed}
 \end{figure}
 
 A tutorial was developed to
@@ -551,18 +547,18 @@ and can be found online at \url{https://github.com/mariosky/protoboard}.
 %The main functionality  used for this experiment is
 %shown schematically in Figure \ref{fig_process} . % Don't know what's
                                 % happened to this figure
-Users log in to 
+Users log in to
 Protoboard  by creating an account or by using their account credentials from the
 social network Facebook. The web tutorial begins with three introductory videos that explain
 the fundamentals of programming in Python, and how to use the editor to
 execute their code. What follows after these videos, are 13 programming
 assignments that students need to solve in sequential order. Assignments are of
 incremental difficulty.
-% In Figure \ref{fig_editor}, 
-% the user interface of the programming editor is
-% presented.
+In Figure \ref{fig_editor},
+the user interface of the programming editor is
+presented.
 For this experiment Protoboard was configured to allow unlimited
-attempts to solve each assignment. 
+attempts to solve each assignment.
 
 A total of 55 volunteers, with no previous experience in Python, where recruited
 as a response to three announcements in a special interest group of programming
@@ -574,25 +570,25 @@ information about the subjects. Their ages were in the range of 18 to
 web tutorial\'s course is of a very basic level, participants had
 different levels of experience, from 0 (8 persons) to more than 5 (22).
 
-% \begin{table}[!t]
-% \centering
-% \caption{ Survey question: How many years of programming experience do you have? }
-% \label{tab_results}
-%     \begin{tabular}{ | c | l | }
-%     \hline
-%     Years Programming          & Number of Learners \\
-%     \hline
-%    		0   &  8 \\
-%     \hline
-%     	1   &  13\\
-%     \hline
-%     	2-4  & 15\\
-%     \hline
-%     	5+   & 22\\
-%     \hline
-%     \end{tabular}
+\begin{table}[!t]
+\centering
+\caption{ Survey question: How many years of programming experience do you have? }
+\label{tab_results}
+    \begin{tabular}{ | c | l | }
+    \hline
+    Years Programming          & Number of Learners \\
+    \hline
+   		0   &  8 \\
+    \hline
+    	1   &  13\\
+    \hline
+    	2-4  & 15\\
+    \hline
+    	5+   & 22\\
+    \hline
+    \end{tabular}
 
-% \end{table}
+\end{table}
 
 
 \begin{table*}[!t]
@@ -632,7 +628,7 @@ After the two weeks of the experiment, only four learners completed all of the
 programming assignments and 22 did not completed any. Out of the total activities
 available (videos, survey and questionnaires) only two completed all. Figure \ref{fig_completed}
 shows the number of assignments and activities completed by each learner.
-  
+
 The participants\' interaction generated a total of 142 feature vectors one for each
 successfully completed assignment. The affective states reported by learners after
 completing each assignment was grouped in three classes: ‘Yes’, ‘Neutral’ and
@@ -652,7 +648,7 @@ the more experienced.
 
 As part of the data mining process a canonical genetic algorithm was used for feature
 selection with the following parameters: population size 700, 30 generations with
-tournament selection, tournament size was 25\% of population size. A uniform crossover 
+tournament selection, tournament size was 25\% of population size. A uniform crossover
 with 0.5 probability and mutation rate of 1/39, and a minimum feature size of 5.
   % Which one? You really have to be _way_ more
   % specific in this conference - JJ
@@ -664,19 +660,19 @@ In the end, the subset for the frustration classifier includes 11 features, and 
 
 The selected classifiers where implemented using Rapid Miner, with the following parameters:
 For J48 decision tree algorithm a confidence threshold for pruning of 0.25, with a
-minimum of 2 instances per leaf, and 3 folds for reduced error pruning. The feed-forward 
+minimum of 2 instances per leaf, and 3 folds for reduced error pruning. The feed-forward
 neural network used a back-propagation learning algorithm with two hidden layer of 20 neurons
 each, with a learning rate and momentum of 0.6, and was trained for 200 generations.
 
-Table \ref{tab_performance} shows the performance of each of the four classifiers together 
-with the $\kappa$ coefficients. A 10-Fold cross validation was used. 
+Table \ref{tab_performance} shows the performance of each of the four classifiers together
+with the $\kappa$ coefficients. A 10-Fold cross validation was used.
 The accuracies and $\kappa$ coefficients obtained are close to what is
 usually obtained in fixed-text methods, for example, the results presented in
-Epp, Lippold y Mandryk \cite{epp2011identifying}. 	
-In a fixed-text method, subjects are asked to write specific texts.											 
+Epp, Lippold y Mandryk \cite{epp2011identifying}.
+In a fixed-text method, subjects are asked to write specific texts.
 The results obtained with this method are satisfactory, considering that learners
 were writing a program, a task comparable with free-text writing, where there
-is no restriction on what has to be written. 
+is no restriction on what has to be written.
 In the case of the $\kappa$ coefficients, it is
 usual to see values below 0.2 in methods involving free-text. In this case, some
 values of $\kappa$ were close to 0.5, is important to consider the values of $\kappa$
@@ -688,10 +684,10 @@ statistic for the kind of problem. The artificial neural network (ANN)
 gives the highest
 accuracy in the classification of frustration.
 
- 
+
 \section{Conclusion}
 
-The aim of this research was to evaluate the use of keyboard and mouse dynamics 
+The aim of this research was to evaluate the use of keyboard and mouse dynamics
 as an appropriate sensory input for an affective recognition system. The context
 of use is a learning environment for programmers, in particular for learning
 assignments consisting in writing short programs interactively. An experimental
@@ -702,22 +698,22 @@ The proposed method in this work obtained
 satisfactory results. It is usual for a classification method based on free-text
 to obtain an accuracy and $\kappa$ measure below their counterparts of
 fixed-text; however, in this
-work the results obtained were similar to those works applied to fixed-text 
-dynamics. A possible explanation of this would be the addition of the mouse 
+work the results obtained were similar to those works applied to fixed-text
+dynamics. A possible explanation of this would be the addition of the mouse
 dynamics features and the additional preprocessing performed on the
 feature vectors. Out of all methods tested, a multilayer perceptron
 trained with backpropagation, the one tagged ANN in RapidMiner,  gave the best classification
-results. 
+results.
 
 
 While these are promising results further experiments are needed. Other experiments
 should focus on novice programmers, but that is left as future
-work. %This 
+work. %This
 % But you have to comment on how this addresses the problem. Which
 % should be in the title that is not there yet - JJ
 % You also have to draw a _hard_ conclusion. Is programming using free
-% text better than what? Typing a fixed text? 
-% Is 80% effective? 
+% text better than what? Typing a fixed text?
+% Is 80% effective?
 % future work will focus on extracting other features from the learners\' interaction
 % such as behavioral data, as proposed by Blikstein
 % \cite{blikstein2011using}; the parameters proposed by this author include the size
@@ -725,14 +721,14 @@ work. %This
 % of certain keys as features e.g., the delete key because is manly used for correcting
 % sentences. Also a multi-modal approach is needed. Since all these need
 % a completely new approach, a new methodology will be developed to
-% gather data and take measures.  
+% gather data and take measures.
 
-% use section* for acknowledgment 
-\section*{Acknowledgment} 
+% use section* for acknowledgment
+\section*{Acknowledgment}
 This work has been supported in part by: de Ministerio espa\~{n}ol de Econom\'{\i}a y Competitividad under project TIN2014-56494-C4-3-P (UGR-EPHEMECH) and by CONACYT PEI Project No. 220590.
 
-\bibliographystyle{apalike} 
-% argument is your BibTeX string definitions and bibliography database(s) 
+\bibliographystyle{apalike}
+% argument is your BibTeX string definitions and bibliography database(s)
 \bibliography{programming}
 
 \vfill
