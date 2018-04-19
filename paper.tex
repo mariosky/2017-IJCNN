@@ -136,47 +136,68 @@ also a positive affect where students are thought to be more involved
 behaviorally, intellectually, and emotionally in their learning tasks
 \cite{bangert2002teacher}.
 
-In order to promote engagement, sometimes instruction is designed with the
+In order to promote engagement, sometimes instruction material is designed with the
 objective of creating learning activities that are challenging to students, but
-not much as to frustrate them. Engagement is not only achieved through the
+not so much as to frustrate them. Engagement is not only achieved through the
 design of single learning activities but also on the appropiate selection and
 sequence in which they are presented.
 For this, experienced instructors gauge a student\'s affective state and then
 assign an activity with the appropriate level of difficulty. However,
 recognition of emotions is a difficult task, even
 for humans. Instructors often use their social intelligence to recognize
-students\'' affective states. In class, an instructor habitually reads the
+students\'' affective states. During presential  classes, an instructor habitually reads the
 faces of students in the classroom to see if they are confused, bored or
-engaged; then decides what to do next. Interactive Learning Environments (ILEs)
-can be enhanced if they can offer an
-automatic perception of emotions. The recognition and simulation of human
-affects are becoming important fields of study, and many researchers have
+engaged and then decides what to do next. However, that is impossible
+in asynchronous and virtual learning environments, that is why there
+have been several ways of including automatic perception of emotions
+in Interactive Learning Environments (ILEs) and Learning Management
+Systems \cite{gottardo2017affective} and even in Integrated
+Development Environments \cite{hundhausen2017ide}.
+
+But this of course presupposes that the affective state of the student is available to the
+system. This detection and recognition can be done in different
+ways. In the wider context of the detection of emotions and affective
+state, many researchers have
 demonstrated that affect-aware computers can provide a better performance in
-assisting humans \cite{picard2001toward}. When ILEs embrace these methodologies
+assisting humans
+\cite{picard2001toward,munson2018models,bosch2017affective}, and that
+providing a richer experience while learning to program might improve
+the outcome by making the students more engaged with it
+\cite{asensio2014progamer}. However, when ILEs embrace these methodologies
 and techniques a
-problem arises. Sensors must be used to gather data, in order to perform the
+problem arises: Sensors which are not present in the default computer
+configuration must be used to gather data that will be used to perform the
 recognition of users\' affective states.
 Some sensors rely on physiological readings
-and must be in physical contact with students.
+and must be in physical contact with students \cite{atkinson2017assessing,swansianalyzing}.
 These sensors can be considered
-intrusive or invasive, and can disrupt the student\'s learning experience
+intrusive or invasive, not to mention that you have to acquire them
+and convice the student to wear them while learning.  They can also disrupt the student\'s learning experience
 \cite{zhai2008stress, sidney2005integrating, arroyo2009emotion}.
-Other sensors such as video cameras can also be considered invasive, since
+Other less cumbersome sensors, such as video cameras, which are in
+fact default equipment in most laptops, can also be considered invasive, since
 they always transmit the user's identity, appearance and behavior along with
-the emotional data \cite{picard2001toward}.
+the emotional data \cite{picard2001toward}. So what we would need in
+order to embed recognition of affective states in learning systems
+would be non-invasive, anonymous and also ubiquitous sensors. In this
+paper we are going to test such a kind of system. 
 
-In programming courses, students solve programming problems by implementing
+We will use the dynamic of the learning environment itself. In programming courses, students solve programming problems by implementing
 their solution in a particular language; in order to do this, they
 must type the code, some times compile it, and finally run it to see how or if
-it works. This cycle can be repeated many times, as they are in this cycle,
+it works. This cycle can be repeated many times, and as they are in this cycle,
 studens often change their affective state according to their performence.
-Data can be collected while students are working on their assignments.
+Data can, then, be non-intrusively collected while students are
+working on their assignments and typing on the keyboard and
+interacting with the GUI via mouse or other pointing device.
 All the dynamics of actually typing the code and for instance
 the syntax errors they received from the compiler or interpreter, the
-corrections they tried, the elapsed time of each step, the number of attempts,
-compiling errors, exceptions, among others. Data mining of all this data could
+corrections they tried, the elapsed time between each step, the number of attempts,
+compiling errors, exceptions, among others, are collected by the ILE
+and can be used. Data mining of all this data could
 bring us a better understanding of the learning process, and also a better
-model to both the selection of the appropriate content and to evaluate the
+model of the student state for both the selection of the appropriate
+content to be shown next and to evaluate the
 learner\'s competencies. But the problem that remains is to how to recognize
 the student's affective state so that it can be used by an adaptive system.
 
@@ -185,20 +206,18 @@ mining of keystroke and mouse dynamics data is proposed.
 The hypothesis is that students can vary the dynamic of keystrokes according
 to their affective state when programming. A correlation of the
 user\'s interactions (keyboard and mouse) with an emotional state, has been
-established in the preliminary work by Zimmermann
+established in preliminary work by Zimmermann
 et al. \cite{zimmermann2003affective}, but the work experiments where
 conducted by asking users to write a predefined message, not programming
-execercises.
-% since Bosch or whatever has already proved that this is possible (or
-% whatever) --> Establish the state of the art and how you plan to
-% advance from it - JJ
+exercises.
 In order to test the correlation of keyboard and mouse dynamics and an
 affective state when programming, an interactive web-based
 programming platform was initially proposed by us in
 \cite{ijcci17}. In this paper we complete the background and
 motivation for this research, and update the state of the art, as well
 as justify better the methdology used and the way data has been
-collected. The platform we presented in that paper originally was designed to collect keyboard and mouse data
+collected. The platform we presented in that paper originally was
+designed to collect keyboard and mouse data 
 from the students\' interaction for data analysis. The proposed method
 has three main components: a JavaScript library to capture keyboard
 and mouse dynamics from a browser-based editor, a pre-processing step
@@ -206,7 +225,14 @@ whose output is a feature vector that is sent to a third component,
 the classification algorithm. 
 
 An experiment was conducted where students solved a series of programming
-assignments using the web based learning environment. Using only the data from the student\'s keyboard and mouse dynamics six affective states where recognized for each of the attempts at solving the assignments. Results obtained from the experiment are promising. The affective states recognized include the most common in novice programmers according to the study of Bosch, D'Mello \& Mills \cite{bixler2013detecting}: boredom, engagement/flow, confusion and frustration. For this experiment
+assignments using the web based learning environment. Using only the
+data from the student\'s keyboard and mouse dynamics six affective
+states where recognized for each of the attempts at solving the
+assignments. Results obtained from the experiment are promising. The
+affective states recognized include the most common in novice
+programmers according to the study of Bosch, D'Mello \& Mills
+\cite{bixler2013detecting}: boredom, engagement/flow, confusion and
+frustration. For this experiment 
 four binary classifiers were compared: J-48 decision trees, k-nearest neighbour
 classifier, feed forward neural network, and a na\"ive Bayes. The output of each
 classifier determined if the student experienced the affective state during the
