@@ -1,5 +1,5 @@
 
-####### Deep Neural Network (9:52)
+####### Deep Neural Network (9:52) 10 population
 PerformanceVector:
 accuracy: 78.29% +/- 7.42% (mikro: 78.17%)
 ConfusionMatrix:
@@ -14,7 +14,7 @@ True:	1	2	3
 2:	8	  15	1
 3:	0	  1	  2
 
-####### Random Trees (1:12)
+####### Random Trees (1:12) 10 population
 PerformanceVector:
 accuracy: 78.81% +/- 6.51% (mikro: 78.87%)
 ConfusionMatrix:
@@ -30,7 +30,7 @@ True:	1	2	3
 3:	1	  0	  2
 
 
-####### J48 (0:38)
+####### J48 (0:38) 10 population
 PerformanceVector:
 accuracy: 78.19% +/- 8.46% (mikro: 78.17%)
 ConfusionMatrix:
@@ -46,7 +46,7 @@ True:	1	  2	  3
 3:	  0	  1	  3
 
 
-##### Gradient Boosted Trees (15:13)
+##### Gradient Boosted Trees (15:13) 10 Pop
 PerformanceVector:
 accuracy: 78.95% +/- 6.79% (mikro: 78.87%)
 ConfusionMatrix:
@@ -62,7 +62,7 @@ True:	1	2	3
 3:	1	0	1
 
 
-##### Bayes (0:02) 10
+##### Bayes (0:02) 10 Population
 PerformanceVector:
 accuracy: 72.52% +/- 9.82% (mikro: 72.54%)
 ConfusionMatrix:
@@ -78,7 +78,7 @@ True:	1	2	3
 3:	9	3	3
 
 
-##### Bayes (0:23)  100 Population
+##### Naive Bayes (0:23)  100 Population
 PerformanceVector:
 accuracy: 80.33% +/- 5.96% (mikro: 80.28%)
 ConfusionMatrix:
@@ -93,7 +93,7 @@ True:	1	2	3
 2:	7	17	2
 3:	1	2	3
 
-##### Bayes (2:17)  100 Population
+##### Naive Bayes Kernel (2:17)  100 Population
 PerformanceVector:
 accuracy: 81.46% +/- 9.40% (mikro: 81.10%)
 ConfusionMatrix:
@@ -105,5 +105,20 @@ kappa: 0.367 +/- 0.321 (mikro: 0.396)
 ConfusionMatrix:
 True:	1	2	3
 1:	93	17	6
-2:	0	10	1
-3:	0	0	0
+2:	0	  10	1
+3:	0	  0	  0
+
+##### KNN (0:37)  100 Population
+PerformanceVector:
+accuracy: 76.14% +/- 8.79% (mikro: 76.06%)
+ConfusionMatrix:
+True:	1	 2	 3
+1:	 94	 17	 4
+2:	  8	 12	 2
+3:	  0	 3	 2
+kappa: 0.371 +/- 0.230 (mikro: 0.372)
+ConfusionMatrix:
+True:	1	2	3
+1:	94	17	4
+2:	8	  12	2
+3:	0	  3	  2
