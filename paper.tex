@@ -36,15 +36,10 @@
 \begin{document}
 
 % paper title
-% Titles are generally capitalized except for words such as a, an, and, as,
-% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
-% not capitalized unless they are the first or last word of the title.
-% Linebreaks \\ can be used within to get better formatting as desired.
-% Do not put math or special symbols in the title.
+
 \title{Mining of Keystroke and Mouse Dynamics to Increase the Engagement of Students with Programming Assignments}
 
-\author{\authorname{Mario Garcia Valdez\sup{1}, Amaury Hernandez Aguila\sup{1},
-  Juan-J. Merelo\sup{2} and Alejandra Mancilla Soto\sup{1}}
+\author{\authorname{Mario Garcia Valdez\sup{1}, Juan-J. Merelo\sup{2}, Amaury Hernandez Aguila\sup{1} and Alejandra Mancilla Soto\sup{1}}
 \affiliation{Dept. of Graduate Studies, Instituto Tecnologico de Tijuana (Mexico),  \email{\tt \(mario,amherag,alejandra.mancilla\)@tectijuana.edu.mx}}
 \affiliation{Geneura Team and CITIC, University of Granada (Spain),
     \email{\tt jmerelo@ugr.es}}
@@ -76,7 +71,7 @@ vector, that have been later used for the classification into five affective sta
 boredom, frustration, distraction, relaxation and engagement.
 The following classification algorithms have been evaluated: k -nearest
 neighbors,feed forward neural networks, na\"ive Bayes classifier and the J-48
-tree induction algorithm). The best accuracy was around 75\% and was achieved
+tree induction , Deep Neural Network, Random Forest, Gradient Boosted Trees and Na\"ive Bayes Kernel ). The best accuracy was around 75\% and was achieved
 by the J-48 algorithm. Results show that data gathered from ready-available,
 non-obtrusive sensors can be used successfully
 as another input to hyebrid classification models in order to predict an
@@ -237,13 +232,16 @@ assignments. Results obtained from the experiment are promising. The
 affective states recognized include the most common in novice
 programmers according to the study of Bosch, D'Mello \& Mills
 \cite{bixler2013detecting}: boredom, engagement/flow, confusion and
-frustration. For the initial experiment 
+frustration. For the initial experiment \cite{ijcci17} 
 
 four binary classifiers were compared: J-48 decision trees, k-nearest neighbour
 classifier, feed forward neural network, and a na\"ive Bayes. The output of each
 classifier determined if the student experienced the affective state during the
-assignment.
-% in this experiment we will also use... - JJ
+assignment. In this experiment we will also use 
+Deep Learning \cite{candel2016deep} and  Gradient Boosted Trees 
+via H2O version 3.8.2.6, and the Random Forest and Na\"ive Bayes Kernel 
+implementatios from RapidMiner Studio version 8.1.
+
 The proposed method could be used in an ensemble with other sensor
 channels to improve the non-invasive recognition of the students’ affective
 states when they are working on a programming task.
@@ -649,12 +647,15 @@ A tutorial was developed to
 obtain the necessary data using the proposed platform Protoboard, a web-based environment,
 whose latest version has been released under an open source license,
 and can be found online at \url{https://github.com/mariosky/protoboard}.
-%The main functionality  used for this experiment is
-%shown schematically in Figure \ref{fig_process} . % Don't know what's
-                                % happened to this figure
+The main functionality  used for this experiment is
+shown schematically in Figure \ref{fig_process} . % Don't know what's
+                                % happened to this  
+                                % There it was.
 Users log in to
-Protoboard  by creating an account or by using their account credentials from the
-social network Facebook. The web tutorial begins with three introductory videos that explain
+Protoboard  by creating an account or by using their account 
+credentials from the
+social network Facebook. The web tutorial begins with three introductory 
+videos that explain
 the fundamentals of programming in Python, and how to use the editor to
 execute their code. What follows after these videos, are 13 programming
 assignments that students need to solve in sequential order. Assignments are of
