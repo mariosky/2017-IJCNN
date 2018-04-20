@@ -156,7 +156,8 @@ Development Environments \cite{hundhausen2017ide}.
 
 But this of course presupposes that the affective state of the student
 is available to the system. This detection and recognition can be done
-in different ways. In the wider context of the detection of emotions and affective
+in real time in different ways. In the wider context of the detection
+of emotions and affective 
 state, many researchers have
 demonstrated that affect-aware computers can provide a better performance in
 assisting humans
@@ -182,25 +183,28 @@ order to embed recognition of affective states in learning systems
 would be non-invasive, anonymous and also ubiquitous sensors. In this
 paper we are going to test such a kind of system. 
 
-And in order to do that, we will use the dynamic of the learning environment itself. In programming courses, students solve assignments by implementing
-their solution in a particular language; in order to do this, they
-must type the code, run it directly or by compiling it to check its results. This cycle can be repeated many times, and as they are in this cycle,
-studens often change their affective state according to their performence.
-Data can, then, be non-intrusively collected while students are
-working on their assignments and typing on the keyboard and
-interacting with the GUI via mouse or other pointing device.
-All the dynamics of actually typing the code and ILE feedback received
-by students, the
-corrections they tried, the elapsed time between each step, the number of attempts,
-compiling errors, exceptions, among others, are collected by the ILE
-and can be used. Data mining of all this data could
-bring us a better understanding of the learning process, and also a better
-model of the student state for both the selection of the appropriate
-content to be shown next and to evaluate the
-learner\'s competencies. But the problem that remains is to how to recognize
-the student's affective state so that it can be used by an adaptive system.
+And in order to do that, we will use the dynamic of the learning
+environment itself. In programming courses, students solve assignments
+by implementing their solution in a particular language; in order to
+do this, they must type the code, run it directly or by compiling it
+to check its results. This cycle can be repeated many times, and as
+they are in this cycle, studens often change their affective state
+according to their performence.  Data can, then, be non-intrusively
+collected while students are working on their assignments and typing
+on the keyboard and interacting with the GUI via mouse or other
+pointing device.  All the dynamics of actually typing the code and ILE
+feedback received by students, the corrections they tried, the elapsed
+time between each step, the number of attempts, compiling errors,
+exceptions, among others, are collected by the ILE and can be
+used. Data mining of all this data could bring us a better
+understanding of the learning process, and also a better model of the
+student state for both the selection of the appropriate content to be
+shown next and to evaluate the learner\'s competencies. But the
+problem that remains is to how to recognize the student's affective
+state so that it can be used by an adaptive system.
 
-In this work, a method for the recognition of affective states through the
+In this work, a method for the recognition of affective states in real
+time through the
 mining of keystroke and mouse dynamics data is analyzed further after
 its initial presentation in \cite{ijcci17}.
 Since students can vary the dynamic of keystrokes according
@@ -255,24 +259,26 @@ could constitute a breakthrough since writing programs in a computer
 is the best way to learn programming by actually doing it. A by Lahtinen, Ala-Mutka \& Järvinen
 \cite{lahtinen2005study} reports that students rated ``working alone on programming coursework'' as a more useful situation than lectures.
 
-The rest of the paper is structured as follows: next Section
-presents a series of works related to the proposed method in this paper; Section
-\ref{sec:method} describes the proposed method for the recognition of affective
-states in a web based learning environment for the teaching of programming
-languages; next in Section \ref{sec:exp} we explain the experimental evaluation of the
-proposed method and results.
-Finally, we draw some conclusions about our methodology and
-experiments.
+The rest of the paper is structured as follows: next Section presents
+a series of works related to the proposed method in this paper;
+Section \ref{sec:method} describes the proposed method for the
+recognition of affective states in a web based learning environment
+for the teaching of programming languages; next in Section
+\ref{sec:exp} we explain the experimental evaluation of the proposed
+method and results.  Finally, we draw some conclusions about our
+methodology and experiments.
 
 
 \section{Related Work}
 
 Affect recognition is an active field of research. Many
-methods have been proposed, some require the intervention of the user to fill up
-questionnaires or forms; these selections remain static until the user changes
-the values. These methods are easy to implement, but cannot detect dynamic
+methods have been proposed, some of them requiring the intervention of
+the user to fill up questionnaires or forms; these selections remain static until the user changes
+the values and are easy to implement, but cannot detect dynamic
 changes.  A more dynamic approach requires the use of sensors to capture
-affective states as they change. The context, the environment and the learning
+affective states in real time.
+
+The context, the environment and the learning
 activity determine what kind of sensors can be used. The most common learning
 environment is the classroom, a physical space with context to facilitate
 learning. But learning is possible in a wide variety of settings, such as
