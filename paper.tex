@@ -276,22 +276,26 @@ methods have been proposed, some of them requiring the intervention of
 the user to fill up questionnaires or forms; these selections remain static until the user changes
 the values and are easy to implement, but cannot detect dynamic
 changes.  A more dynamic approach requires the use of sensors to capture
-affective states in real time.
+affective states in real time, and that is what we are doing in this
+paper. 
 
-The context, the environment and the learning
-activity determine what kind of sensors can be used. The most common learning
-environment is the classroom, a physical space with context to facilitate
+The actual sensors are determined by the context, the environment and the learning
+activity determine. The most common learning
+environment is the classroom, a physical space that provides a context to facilitate
 learning. But learning is possible in a wide variety of settings, such as
-outside-of-school locations and outdoor environments these are sometimes
-referred as ubiquitous learning environments, an example of such environments is
-the work of Yang \cite{yang2006context} in a context-aware environment, but missing affective
-information. There are also virtual learning environments such as the one proposed by Dillenburg
+out-of-school locations and outdoor environments which are sometimes
+referred to as ubiquitous learning environments. An analysis of such
+environments is done by Yang \cite{yang2006context} in a context-aware
+environment, but his work misses affective information. There are also
+virtual learning environments such as the one proposed by Dillenburg 
 \cite{dillenbourg2002virtual}  where learners can have avatars, and virtual places
-where they can play roles and socialize.
+where they can play roles and socialize. In general, the importance of
+affect in learning environments has been recognized at a later stage
+of research. 
 
-In the general context of learning there have been some approaches for affect
-recognition. The work of Kapoor y Picard \cite{kapoor2005multimodal} uses a multi modal
-approach using sensory information from facial expressions and postural shifts
+For instance, the work of Kapoor y Picard \cite{kapoor2005multimodal}
+uses a multimodal 
+approach with sensory information from facial expressions and postural shifts
 of the learner combined with information about the learner\'s activity on the
 computer; the learning activity was solving a puzzle on a computer. They report
 using a multimodal Gaussian Process approach achieving an accuracy of over 86\%.
@@ -299,14 +303,18 @@ Sidney, et al., \cite{sidney2005integrating} enhances the intelligent tutor syst
 affective recognition using non-intrusive sensory information from facial
 expressions, gross body movements, and conversational cues from logs.  The
 subject material of that system consisted in lectures of computer
-literacy.
+literacy. In this early stage of research, the importance of privacy
+and non-intrusiveness is set aside. 
 
-Elliott, Rickel y Lester \cite{elliott1999lifelike,d2008autotutor} propose the integration of an affective reasoner
+Some other works try to introduce affective computing features into
+interactive learning environments, without explicitly detecting of
+using the student's affective state. For instance, Elliott, Rickel y Lester \cite{elliott1999lifelike,d2008autotutor}
+propose the integration of an affective reasoner 
 with an agent in a virtual environment. In this work an agent called Steve
 responds emotionally to other agents and interactive users. The agent simulates
 his emotions through different multimedia modes including facial expressions and
 speech. Affective reasoning agents were used for training, by putting students
-in work related situations. Agents could react to the behavior of students, for
+in work related situations. Agents could react to the behavior of students; for
 instance if a student was being careless in a task and was in a dangerous
 situation, Steve would show distress or fear. Also in a virtual environment the
 work of McQuiggan, Robison \& Lester \cite{mcquiggan2010affective} extends this line of research by
