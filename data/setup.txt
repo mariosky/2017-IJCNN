@@ -11,3 +11,40 @@ p crossover: 0.5
 
 Crossvalidation:
 10-Fold
+
+
+Random Forest:
+number of trees: 1o
+criterion: gain_ratio
+maximal depth:20
+confidence: 0.25
+minimal gain:0.1
+minimal leaf size:2
+
+J48:
+confidence:.79
+minimal leaf size:2
+
+Gradient Boosted Trees:
+number of trees: 20
+maximal depth:5
+min rows:10
+min split improvement:0.0
+number of bins: 20
+learning rate:0.1
+sample rate: 1.0
+
+KNN
+k = 4
+
+Bayes Kernel
+laplace correction: True
+estimation mode: Greedy
+minimum bandwidth: 0.1
+number of kernels: 10
+
+
+Deep Neural network
+activation: Rectifier
+hidden layer sizes: 50 | 50 
+epochs:10
