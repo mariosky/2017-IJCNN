@@ -1,0 +1,13 @@
+
+Evolutionary Optimization of Feature Selection
+population size: 100
+generations: 30
+weights normalized: True
+Selection: tournament
+tournament size: 0.25 (fraction of population)
+p initialize: 0.5
+p mutation: 1/number of attributes
+p crossover: 0.5
+
+Crossvalidation:
+10-Fold
