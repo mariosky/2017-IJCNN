@@ -1,5 +1,5 @@
 Main differences between the conference version and the extended revised version. 
 
-First, we addressed the changes stated in the invitation email: Title, Abstract, and Conclusions have been updated.  We properly cite the paper published in the conference proceedings in figures, tables, and text.  
+First, we addressed the changes stated in the invitation email: Title, Abstract, and Conclusions have been updated.  We properly cite the paper published in the conference proceedings in figures, tables, and text. We have also rewritten most paragraphs in the paper, including of course the updated ones. 
 
-We also updated the bibliography and state of the art, conducted an additional experiment adding more classification algorithms. We updated the Conclusions and Future Work sections. Added several two Figures and a Table to better explain the details of the implementation. 
+We also updated the bibliography and state of the art, conducted an additional experiment adding more classification algorithms. We updated the Conclusions and Future Work sections. We have also added several two Figures and a Table to better explain the details of the implementation. 
