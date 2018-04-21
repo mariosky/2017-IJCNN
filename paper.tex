@@ -606,8 +606,7 @@ movements in the axes X and Y are also calculated. Lastly, a final feature is
 added to preprocessing of the data. The web tutorial recorded  and included in the feature vector how many attempts
 a student required before successfully solving an assignment. The final feature vector
 consists of 39 features; these are based on the work of Epp, Lippold \& Mandryk
-\cite{epp2011identifying}.
-%and are shown in Table \ref{tab_features}.
+\cite{epp2011identifying} and are shown in Table \ref{tab_features}.
 
 Once feature vectors are obtained from an experiment, the generated dataset is
 normally used as training data for a classifier. Researchers of affective
@@ -779,10 +778,29 @@ frustrated or bored learners simply quit the tutorial. A high number of learners
 (49\%) did not completed any assignment and the once who completed more where also
 the more experienced.
 
+\begin{table}[h!tb]
+\centering
+\caption{Parameters used in the evolutionary algorithm for feature
+  selection.}
+\label{tab_ga}
+    \begin{tabular}{ | l | l | }
+      \hline
+      Parameter & Value \\
+      Population size & 700 \\
+      Generations & 30 \\
+      Selection & Tournament \\
+      Tournament size & 25\% of population size \\
+      Crossover & Uniform \\
+      Crossover probability & 0.5 \\
+      Mutation rate & $1 \over 39$ \\
+      Minimum number of features & 5 \\
+    \end{tabular}
+  \end{table}
+  
 As part of the data mining process a canonical genetic algorithm was used for feature
-selection with the following parameters: population size 700, 30 generations with
-tournament selection, tournament size was 25\% of population size. A uniform crossover
-with 0.5 probability and mutation rate of 1/39, and a minimum feature size of 5.
+selection with the parameters used shown in Table \ref{tab_ga}. These
+parameters were set heuristically, and were the same for selecting the
+features of all classification algorithms. % Mario check this - JJ
 In the end, the subset for the frustration classifier includes only 11 features, and 
 the subset for the boredom classifier consists of only 13 features. 
 
@@ -828,7 +846,7 @@ Population size = 10, generations = 30, selection = tournament, tournament size 
 probability = 1/number of attributes,  crossover probability = 0.5. Parameters
 used for the Random Forest algorithm: number of trees = 10, 
 criterion = gain ratio, maximal depth = 20, 
-confidence = 0.25, minimal gain = 0.1, minimal leaf size = 2.  The
+confidence = 0.25, minimal gain = 0.1, minmail leaf size = 2.  The
 parameters used for are the J48 are the following:  confidence = 0.79, minimal
 leaf size=2. For the kNN algorithm, the value k = 4 was used. 
 For gradient boosted
@@ -890,7 +908,7 @@ Future work will focus on extracting other features from the learners\' interact
 \cite{blikstein2011using}; the parameters proposed by this author
 include the size of the program and changes in the code. Other authors
 also propose treating the use of certain keys as features e.g., the
-delete key because is manly used for correcting sentences. Also a multi-modal approach is needed. Since all these need a completely new approach, a new methodology will be developed to
+delete key because it is mainly used for correcting sentences. Also a multi-modal approach is needed. Since all these need a completely new approach, a new methodology will be developed to
 gather data and take measures.
 
 % use section* for acknowledgment
