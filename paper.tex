@@ -799,22 +799,41 @@ the more experienced.
 
     \end{tabular}
   \end{table}
-  
+  %
+  \begin{table*}[h!tb]
+\centering
+\caption{Parameters used in the classification algorithms.}
+\label{tab_clas}
+\begin{tabular}{ | l | p{10cm} | }
+  \hline
+  Algorithm & Parameters \\
+  \hline
+  J48 & Confidence threshold for pruning = 0.25; minimum instances per
+        leaf = 2; folds for reduced error pruning = 3 \\
+  Neural network & Learning algorithm: Back-propagation; hidden layers
+                   = 2, hidden layer size = 20 neurons; learning rate
+                   = 0.6; momentum = 0.6; training iterations = 200 \\
+  \hline
+\end{tabular}
+\end{table*}
+%
 As part of the data mining process a canonical genetic algorithm was used for feature
 selection with the parameters used shown in Table \ref{tab_ga}. These
 parameters were set heuristically, and were the same for selecting the
 features of all classification algorithms. % Mario check this - JJ
 In the end, the subset for the frustration classifier includes only 11 features, and 
 the subset for the boredom classifier consists of only 13 features. 
-
+%
 % It's not clear what's the fitness function here or what it really does. Maybe we could expand this part of the work, test different evolutionary algorithms and write a paper on feature selection using evolutionary algorithms for EvoStar - JJ
-
+%
 The selected classifiers where implemented using Rapid Miner, with the
-following parameters: For J48 decision tree algorithm a confidence threshold
-for pruning of 0.25, with a minimum of 2 instances per leaf, and 3 folds for
-reduced error pruning. The feed-forward neural network used a back-propagation
-learning algorithm with two hidden layer of 20 neurons each, with a learning
-rate and momentum of 0.6, and was trained for 200 generations.
+  parameters shown in Table \ref{tab_clas}. 
+
+%   For J48 decision tree algorithm a confidence threshold
+% for pruning of 0.25, with a minimum of 2 instances per leaf, and 3 folds for
+% reduced error pruning. The feed-forward neural network used a back-propagation
+% learning algorithm with two hidden layer of 20 neurons each, with a learning
+% rate and momentum of 0.6, and was trained for 200 generations.
 
 Table \ref{tab_performance} shows the performance of each of the four
 classifiers together
@@ -860,15 +879,29 @@ accuracy in the classification of frustration.
 % 
 \begin{table*}[!t]
 \centering
-\caption{Parameters used for the different classification algorithms }
+\caption{Parameters used for the different classification algorithms
+  used for recognizing the Flow/engaged state.}
 \label{tab_params_ml}
-\label{tab_perf_flow}
-    \begin{tabular}{ | l | l |  }
-
+    \begin{tabular}{ | l | p{10cm} |  }
+\hline
       Algorithm & Parameters \\
+      \hline 
+      Random Forest &  number of trees = 10, 
+criterion = gain ratio, maximal depth = 20, 
+                      confidence = 0.25, minimal gain = 0.1, minmail leaf size = 2 \\
+      J48 &  confidence = 0.79, minimal leaf size=2 \\
+      kNN & $k$ = 4 \\
+      Gradient boosted trees & number of trees = 20,  maximal depth = 5, minimum rows = 10, 
+minimum split 
+improvement = 0.0, number of bins = 20, 
+                               learning rate = 0.1, sample rate = 1.0 \\
+      Bayes Kernel & laplace correction = True, estimation mode = greedy, 
+                     minimum bandwidth = 0.1, number of kernels = 10 \\
+      Deep learning & activation = Rectifier, hidden layer sizes =
+                      [50, 50], epochs = 10 \\
       \hline
     \end{tabular}
-  \end{table}
+  \end{table*}
       
 Table \ref{tab_perf_flow} shows the performance for the additional classifiers
 evaluated specifically for the Flow/engaged affective state. The goal was to
@@ -887,20 +920,21 @@ optimizing a weight vector.
       % Please Mario check these parameters and how they have put to
       % the table; I don't know what's the "initialization
       % probability" - JJ
-
-      Parameters
-used for the Random Forest algorithm: number of trees = 10, 
-criterion = gain ratio, maximal depth = 20, 
-confidence = 0.25, minimal gain = 0.1, minmail leaf size = 2.  The
-parameters used for are the J48 are the following:  confidence = 0.79, minimal
-leaf size=2. For the kNN algorithm, the value k = 4 was used. 
-For gradient boosted
-trees: number of trees = 20,  maximal depth = 5, minimum rows = 10, 
-minimum split 
-improvement = 0.0, number of bins = 20, 
-learning rate = 0.1, sample rate = 1.0.  Bayes
-Kernel: laplace correction = True, estimation mode = greedy, 
-minimum bandwidth = 0.1, number of kernels = 10.  Finally for deep learning: activation = Rectifier, hidden layer sizes = [50, 50], epochs = 10. 
+%
+      The parameters used in this case for the classification
+      algorithms, and the algorithms used are shown in Table \ref{tab_params_ml}
+% used for the Random Forest algorithm: number of trees = 10, 
+% criterion = gain ratio, maximal depth = 20, 
+% confidence = 0.25, minimal gain = 0.1, minmail leaf size = 2.  The
+% parameters used for are the J48 are the following:  confidence = 0.79, minimal
+% leaf size=2. For the kNN algorithm, the value k = 4 was used. 
+% For gradient boosted
+% trees: number of trees = 20,  maximal depth = 5, minimum rows = 10, 
+% minimum split 
+% improvement = 0.0, number of bins = 20, 
+% learning rate = 0.1, sample rate = 1.0.  Bayes
+% Kernel: laplace correction = True, estimation mode = greedy, 
+% minimum bandwidth = 0.1, number of kernels = 10.  Finally for deep learning: activation = Rectifier, hidden layer sizes = [50, 50], epochs = 10. 
 
 
 Again the accuracy and $\kappa$ values of the
