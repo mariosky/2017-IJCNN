@@ -786,14 +786,17 @@ the more experienced.
     \begin{tabular}{ | l | l | }
       \hline
       Parameter & Value \\
+      \hline
       Population size & 700 \\
       Generations & 30 \\
       Selection & Tournament \\
-      Tournament size & 25\% of population size \\
+      Tournament size & population size / 4 \\
       Crossover & Uniform \\
       Crossover probability & 0.5 \\
       Mutation rate & $1 \over 39$ \\
       Minimum number of features & 5 \\
+            \hline
+
     \end{tabular}
   \end{table}
   
@@ -833,17 +836,59 @@ accuracy of 80.48\%, which is marginally better than the others, and an accepted
 statistic for the kind of problem. The artificial neural network (ANN)
 gives the highest
 accuracy in the classification of frustration.
+%
+\begin{table}[h!tb]
+\centering
+\caption{Parameters used in the evolutionary algorithm for feature
+  weight optimization.}
+\label{tab_ga_w}
+    \begin{tabular}{ | l | l | }
+      \hline
+      Parameter & Value \\
+        \hline
+      Population size & 10 \\
+      Generations & 30 \\
+      Selection & Tournament \\
+      Tournament size & population size / 4 \\
+      Crossover & Uniform \\
+      Crossover probability & 0.5 \\
+      Mutation rate & $1 \over 39$ \\
+      Minimum number of features & 5 \\
+        \hline
+    \end{tabular}
+  \end{table}
+% 
+\begin{table*}[!t]
+\centering
+\caption{Parameters used for the different classification algorithms }
+\label{tab_params_ml}
+\label{tab_perf_flow}
+    \begin{tabular}{ | l | l |  }
 
+      Algorithm & Parameters \\
+      \hline
+    \end{tabular}
+  \end{table}
+      
 Table \ref{tab_perf_flow} shows the performance for the additional classifiers
 evaluated specifically for the Flow/engaged affective state. The goal was to
 increase the performance achieved earlier. Again a ten-
 fold cross-validation was conducted. In this case, instead of using an
 evolutionary algorithm to optimize feature selection, it was used for 
 optimizing a weight vector. 
-The feature-weight vector assigned a weight to each o the features. The
-parameters used for the evolutionary optimization algorithm are the following:
-Population size = 10, generations = 30, selection = tournament, tournament size = 0.25 (fraction of the population),  initialize probability = 0.5,  mutation
-probability = 1/number of attributes,  crossover probability = 0.5. Parameters
+      The feature-weight vector assigned a weight to each one of the
+      features, and the parameters that have been used in the
+      evolutionary algorithm are shown in Table \ref{tab_ga_w}.
+      % The
+% parameters used for the evolutionary optimization algorithm are the following:
+% Population size = 10, generations = 30, selection = tournament, tournament size = 0.25 (fraction of the population),  initialize probability = 0.5,  mutation
+%       probability = 1/number of attributes,  crossover probability =
+%       0.5.
+      % Please Mario check these parameters and how they have put to
+      % the table; I don't know what's the "initialization
+      % probability" - JJ
+
+      Parameters
 used for the Random Forest algorithm: number of trees = 10, 
 criterion = gain ratio, maximal depth = 20, 
 confidence = 0.25, minimal gain = 0.1, minmail leaf size = 2.  The
