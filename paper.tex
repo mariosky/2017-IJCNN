@@ -804,9 +804,17 @@ As part of the data mining process a canonical genetic algorithm was used for fe
 selection with the parameters used shown in Table \ref{tab_ga}. These
 parameters were set heuristically and were the same for selecting the
 features of all classification algorithms. The population size was changed
-mainly because the feature vector is real-valued and is more computationally demanding.  
+mainly because some of the algorithms are more computationally demanding. The
+genetic algorithm is included as a RapidMiner operator. In the algorithm, each
+individual consists of a binary list indicating if a feature will be used or
+not. The mutation operator simply changes the switch with the probability
+indicated in the mutation-probability parameter.  When the population is
+initialized each switch has 0.5 probability of being "on".
+ 
 % Mario check this - JJ
 % OK, added another sentence - Mario 
+% Added a mini explanation of the GA. - Mario 
+
 In the end, the subset for the frustration classifier includes only 11 features, and 
 the subset for the boredom classifier consists of only 13 features. 
 
@@ -876,12 +884,7 @@ accuracy in the classification of frustration.
 Table \ref{tab_perf_flow} shows the performance for the additional classifiers
 evaluated specifically for the Flow/engaged affective state. The goal was to
 increase the performance achieved earlier. Again a ten-
-fold cross-validation was conducted. In this case, instead of using an
-evolutionary algorithm to optimize feature selection, it was used for 
-optimizing a weight vector. 
-      The feature-weight vector assigned a weight to each one of the
-      features, and the parameters that have been used in the
-      evolutionary algorithm are shown in Table \ref{tab_ga_w}.
+fold cross-validation was conducted. Again, an evolutionary algorithm was used for feature with the parameters shown in Table \ref{tab_ga_w}.
       % The
 % parameters used for the evolutionary optimization algorithm are the following:
 % Population size = 10, generations = 30, selection = tournament, tournament size = 0.25 (fraction of the population),  initialize probability = 0.5,  mutation
