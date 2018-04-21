@@ -819,8 +819,19 @@ the more experienced.
 %
 As part of the data mining process a canonical genetic algorithm was used for feature
 selection with the parameters used shown in Table \ref{tab_ga}. These
-parameters were set heuristically, and were the same for selecting the
-features of all classification algorithms. % Mario check this - JJ
+parameters were set heuristically and were the same for selecting the
+features of all classification algorithms. The population size was changed
+mainly because some of the algorithms are more computationally demanding. The
+genetic algorithm is included as a RapidMiner operator. In the algorithm, each
+individual consists of a binary list indicating if a feature will be used or
+not. The mutation operator simply changes the switch with the probability
+indicated in the mutation-probability parameter.  When the population is
+initialized each switch has 0.5 probability of being "on".
+ 
+% Mario check this - JJ
+% OK, added another sentence - Mario 
+% Added a mini explanation of the GA. - Mario 
+
 In the end, the subset for the frustration classifier includes only 11 features, and 
 the subset for the boredom classifier consists of only 13 features. 
 %
@@ -864,7 +875,8 @@ accuracy in the classification of frustration.
     \begin{tabular}{ | l | l | }
       \hline
       Parameter & Value \\
-        \hline
+      \hline
+      Initialize probability & 0.5 \\
       Population size & 10 \\
       Generations & 30 \\
       Selection & Tournament \\
@@ -906,12 +918,7 @@ improvement = 0.0, number of bins = 20,
 Table \ref{tab_perf_flow} shows the performance for the additional classifiers
 evaluated specifically for the Flow/engaged affective state. The goal was to
 increase the performance achieved earlier. Again a ten-
-fold cross-validation was conducted. In this case, instead of using an
-evolutionary algorithm to optimize feature selection, it was used for 
-optimizing a weight vector. 
-      The feature-weight vector assigned a weight to each one of the
-      features, and the parameters that have been used in the
-      evolutionary algorithm are shown in Table \ref{tab_ga_w}.
+fold cross-validation was conducted. Again, an evolutionary algorithm was used for feature with the parameters shown in Table \ref{tab_ga_w}.
       % The
 % parameters used for the evolutionary optimization algorithm are the following:
 % Population size = 10, generations = 30, selection = tournament, tournament size = 0.25 (fraction of the population),  initialize probability = 0.5,  mutation
@@ -920,7 +927,10 @@ optimizing a weight vector.
       % Please Mario check these parameters and how they have put to
       % the table; I don't know what's the "initialization
       % probability" - JJ
-%
+     % Is the probability a feature has to be "on" (used by the algorithm)
+     % initially.
+% Does that mean that you make probablity = 0.5? Still don't
+% understand, but I have added to the table - JJ
       The parameters used in this case for the classification
       algorithms, and the algorithms used are shown in Table \ref{tab_params_ml}
 % used for the Random Forest algorithm: number of trees = 10, 
@@ -935,7 +945,6 @@ optimizing a weight vector.
 % learning rate = 0.1, sample rate = 1.0.  Bayes
 % Kernel: laplace correction = True, estimation mode = greedy, 
 % minimum bandwidth = 0.1, number of kernels = 10.  Finally for deep learning: activation = Rectifier, hidden layer sizes = [50, 50], epochs = 10. 
-
 
 Again the accuracy and $\kappa$ values of the
 algorithms show the difficulty of having classes that are not uniformly
