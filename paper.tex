@@ -69,10 +69,10 @@ series of pre-processing techniques that are able to convert data from keyboard 
 they were coding basic Python programming assignments  into feature
 vector, that have been later used for the classification into five affective states:
 boredom, frustration, distraction, relaxation and engagement.
-The following classification algorithms have been evaluated: k -nearest
-neighbors,feed forward neural networks, na\"ive Bayes classifier and the J-48
-tree induction , Deep Neural Network, Random Forest, Gradient Boosted Trees and Na\"ive Bayes Kernel ). The best accuracy was around 75\% and was achieved
-by the J-48 algorithm. Results show that data gathered from ready-available,
+The following classification algorithms have been evaluated: k-nearest
+neighbors,feed forward neural networks, na\"ive Bayes classifier, J-48
+tree induction algorithm, deep learning, random forest, gradient boosted trees and na\"ive Bayes Kernel). The best accuracy was around 78\% and was achieved
+by the tree induction algorithms. Results show that data gathered from ready-available,
 non-obtrusive sensors can be used successfully
 as another input to hyebrid classification models in order to predict an
 individual\'s affective states, and these in turn can be used to make
@@ -550,7 +550,7 @@ sandbox is also available in \url{https://github.com/mariosky/sandbox}.
 \includegraphics[width=0.60\textwidth]{editorRresult.png}
 \caption{Web-based editor used for code evaluation. The lower panel
   indicates (in Spanish) the tests passed successfully and the program
-  output.}
+  output \cite{ijcci17}.}
 \label{fig_editor}
 \end{figure*}
 
@@ -639,7 +639,7 @@ any time.
 \centering
 \includegraphics[width=0.48\textwidth]{Completed.png}
 \includegraphics[width=0.48\textwidth]{classDist.png}
-\caption{Completed activities and assignments by learner in ascending order (left) and distribution of emotions reported (right).}
+\caption{Completed activities and assignments by learner in ascending order (left) and distribution of emotions reported (right) \cite{ijcci17}.}
 \label{fig_completed}
 \end{figure*}
 
@@ -699,7 +699,7 @@ different levels of experience, from 0 (8 persons) to more than 5 (22).
 
 \begin{table*}[!t]
 \centering
-\caption{Performance of every classifier with 10-fold cross validation. Accuracy ($\kappa$) }
+\caption{Performance of every classifier with 10-fold cross validation \cite{ijcci17}. Accuracy ($\kappa$) }
 \label{tab_performance}
     \begin{tabular}{ | c | l | l | l | l | }
     \hline
@@ -723,10 +723,10 @@ different levels of experience, from 0 (8 persons) to more than 5 (22).
 \begin{table*}[!t]
 \centering
 \caption{Performance of classifiers for Flow/Engaged  with 10-fold cross validation. }
-\label{tab_performance}
+\label{tab_perf_flow}
     \begin{tabular}{ | l | l | l | }
     \hline
-    Classifier   &  Accuracy            & kappa                 \\
+    Classifier   &  Accuracy            & $\kappa$                 \\
     \hline
     Na\"ive Bayes     & 72.52\%  & 0.339  \\
     \hline
@@ -784,8 +784,9 @@ As part of the data mining process a canonical genetic algorithm was used for fe
 selection with the following parameters: population size 700, 30 generations with
 tournament selection, tournament size was 25\% of population size. A uniform crossover
 with 0.5 probability and mutation rate of 1/39, and a minimum feature size of 5.
-In the end, the subset for the frustration classifier includes 11 features, and the subset for the boredom classifier consists of
-13 features.
+In the end, the subset for the frustration classifier includes only 11 features, and 
+the subset for the boredom classifier consists of only 13 features. 
+
 % It's not clear what's the fitness function here or what it really does. Maybe we could expand this part of the work, test different evolutionary algorithms and write a paper on feature selection using evolutionary algorithms for EvoStar - JJ
 
 The selected classifiers where implemented using Rapid Miner, with the
@@ -816,6 +817,35 @@ statistic for the kind of problem. The artificial neural network (ANN)
 gives the highest
 accuracy in the classification of frustration.
 
+Table \ref{tab_perf_flow} shows the performance for the additional classifiers
+evaluated specifically for the Flow/engaged affective state. The goal was to
+increase the performance achieved earlier. Table 1shows the performance for the
+additional classifiers evaluated specifically for the Flow/engaged affective
+state. The goal was to increase the performance achieved earlier.  Again a ten-
+fold cross-validation was conducted. In this case, instead of using an
+evolutionary algorithm to conduct feature selection, a vector of weights was
+optimized. The feature-weight vector assignes a weight to each feature. The
+parameters used for the evolutionary optimization algorithm are the following:
+Population size= 10, generations= 30, selection= tournament, tournament size=
+0.25 (fraction of the population),  initialize probability=0.5,  mutation
+probability = 1/number of attributes,  crossover probability=0.5. Parameters
+used for the Random Forest algorithm: number of trees=10, criterion=gain_ratio,
+maximal depth=20, confidence=0.25, minimal gain=0.1, minimal leaf size=2.  The
+parameters used for are the J48 are the following:  confidence=0.79, minimal
+leaf size=2. For the kNN algorithm, the value k=4 was used. For gradient boosted
+trees: number of trees= 20,  maximal depth=5, minimum rows=10, minimum split
+improvement=0.0, number of bins=20, learning rate=0.1, sample rate=1.0.  Bayes
+Kernel:  laplace correction=True, estimation mode=greedy, minimum bandwidth=0.1,
+number of kernels=10.  Finally for deep learning: activation=Rectifier, hidden
+layer sizes= [50, 50], epochs=10. Again the accuracy and $\kappa$ values of the
+algorithms show the difficulty of having classes that are not uniformly
+distributed, with several algorithms reaching an acceptable accuracy but with a
+low value of  $\kappa$, this is an indication of algorithms classifying almost
+everything as the dominant class. The results of the tree induction algorithms
+are better when we consider both accuracy and  $\kappa$ values. In the case of
+kernel-based or deep learning methods they provide competitive results but at a
+higher computational cost.
+ 
 
 \section{Conclusion}
 
