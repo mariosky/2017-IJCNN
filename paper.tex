@@ -64,7 +64,7 @@ from  a collection of programming assignments, they should consider the
 states of users with different levels of expertise
 when learning a new programming language. We capture student data from
 a web-based platform, a learning management system where students
-interact whith programming excersises. We introduce in this paper a
+interact with programming exorcises. We introduce in this paper a
 series of pre-processing techniques that are able to convert data from keyboard and mouse dynamics captured from students as
 they were coding basic Python programming assignments  into feature
 vector, that have been later used for the classification into five affective states:
@@ -74,7 +74,7 @@ neighbors,feed forward neural networks, na\"ive Bayes classifier, J-48
 tree induction algorithm, deep learning, random forest, gradient boosted trees and na\"ive Bayes Kernel). The best accuracy was around 78\% and was achieved
 by the tree induction algorithms. Results show that data gathered from ready-available,
 non-obtrusive sensors can be used successfully
-as another input to hyebrid classification models in order to predict an
+as another input to hybrid classification models in order to predict an
 individual\'s affective states, and these in turn can be used to make
 students more engaged and thus learn more efficiently.}
 
@@ -134,7 +134,7 @@ behaviorally, intellectually, and emotionally in their learning tasks
 In order to promote engagement, sometimes instruction material is designed with the
 objective of creating learning activities that are challenging to students, but
 not so much as to frustrate them. Engagement is not only achieved through the
-design of single learning activities but also on the appropiate selection and
+design of single learning activities but also on the appropriate selection and
 sequence in which they are presented.
 For this, experienced instructors gauge a student\'s affective state and then
 assign an activity with the appropriate level of difficulty. However,
@@ -168,7 +168,7 @@ Some sensors rely on physiological readings
 and must be in physical contact with students \cite{atkinson2017assessing,swansianalyzing}.
 These sensors can be considered
 intrusive or invasive, not to mention that you have to acquire them
-and convice the student to wear them while learning.  They can also disrupt the student\'s learning experience
+and convince the student to wear them while learning.  They can also disrupt the student\'s learning experience
 \cite{zhai2008stress, sidney2005integrating, arroyo2009emotion}.
 Other less cumbersome sensors, such as video cameras, which are in
 fact default equipment in most laptops, can also be considered invasive, since
@@ -183,8 +183,8 @@ environment itself. In programming courses, students solve assignments
 by implementing their solution in a particular language; in order to
 do this, they must type the code, run it directly or by compiling it
 to check its results. This cycle can be repeated many times, and as
-they are in this cycle, studens often change their affective state
-according to their performence.  Data can, then, be non-intrusively
+they are in this cycle, students often change their affective state
+according to their performance.  Data can, then, be non-intrusively
 collected while students are working on their assignments and typing
 on the keyboard and interacting with the GUI via mouse or other
 pointing device.  All the dynamics of actually typing the code and ILE
@@ -214,7 +214,7 @@ affective state when programming, an interactive web-based
 programming platform was initially proposed by us in
 \cite{ijcci17}. In this paper we complete the background and
 motivation for this research, and update the state of the art, as well
-as justify better the methdology used and the way data has been
+as justify better the methodology used and the way data has been
 collected, extending the results and the methods used. The platform we
 presented in that paper originally was 
 designed to collect keyboard and mouse data 
@@ -239,7 +239,7 @@ classifier determined if the student experienced the affective state during the
 assignment. In this experiment we will also use 
 Deep Learning \cite{candel2016deep} and  Gradient Boosted Trees 
 via H2O version 3.8.2.6, and the Random Forest and Na\"ive Bayes Kernel 
-implementatios from RapidMiner Studio version 8.1.
+implementations from RapidMiner Studio version 8.1.
 
 The proposed method could be used in an ensemble with other sensor
 channels to improve the non-invasive recognition of the students’ affective
@@ -900,14 +900,14 @@ accuracy in the classification of frustration.
       \hline 
       Random Forest &  number of trees = 10, 
 criterion = gain ratio, maximal depth = 20, 
-                      confidence = 0.25, minimal gain = 0.1, minmail leaf size = 2 \\
+                      confidence = 0.25, minimal gain = 0.1, minimal leaf size = 2 \\
       J48 &  confidence = 0.79, minimal leaf size=2 \\
       kNN & $k$ = 4 \\
       Gradient boosted trees & number of trees = 20,  maximal depth = 5, minimum rows = 10, 
 minimum split 
 improvement = 0.0, number of bins = 20, 
                                learning rate = 0.1, sample rate = 1.0 \\
-      Bayes Kernel & laplace correction = True, estimation mode = greedy, 
+      Bayes Kernel & Laplace correction = True, estimation mode = greedy, 
                      minimum bandwidth = 0.1, number of kernels = 10 \\
       Deep learning & activation = Rectifier, hidden layer sizes =
                       [50, 50], epochs = 10 \\
@@ -961,32 +961,37 @@ higher computational cost.
 
 \section{Conclusion}
 
-The aim of this research was to evaluate the use of keyboard and mouse dynamics
-as an appropriate sensory input for an affective recognition system. The context
-of use is a learning environment for programmers, in particular for learning
-assignments consisting in writing short programs interactively. An experimental
-approach was adopted with this objective, by effectively using the
-method with real subjects using the environment.
+The aim of this research was to evaluate the use of keyboard and mouse
+dynamics (KD) as an appropriate sensory input for an affective
+recognition system for students of different levels learning to
+program, specifically carrying out assignments consisting in writing
+short programs interactively. An experimental approach was adopted
+with this objective, by effectively using the method with real
+subjects using the environment and using KD measurements and survey
+responses as training data for several machine learning systems.
 
 The proposed method in this work obtained
 satisfactory results. It is usual for a classification method based on free-text
 to obtain an accuracy and $\kappa$ measure below their counterparts of
 fixed-text; however, in this
-work the results obtained were similar to those works applied to fixed-text
+work the results obtained were similar to those works that worked with fixed-text
 dynamics. A possible explanation of this would be the addition of the mouse
 dynamics features and the additional preprocessing performed on the
-feature vectors.  Out of all methods tested, tree induction algorithms
-obtained better results when we take into consideration both accuracy and  $\kappa$ values.
+feature vectors. Out of all methods tested, tree induction algorithms
+obtained better results when we take into consideration both accuracy
+and $\kappa$ values. These methods, besides, are able to give us some
+insight on what are the KD features that effectively describe the
+different affective states. 
 
-While these are promising results further experiments are
+While these are promising results, further experiments are
 needed. Other experiments should focus on novice programmers, with
 which we expect to gather more data and more representative examples for all the
-clasess. These experiments should give researchers the hability to do stratified samples to balence
+classes. These experiments should give researchers the ability to do stratified samples to balance
 the class distribution and achieve better results. Also more experiments should
-give more insigth on the relationship between affective state  and interactive
+give more insight on the relationship between affective state  and interactive
 behavior. Results show near 80\% accuracy, these results  are competitive
 against other classifiers of a similar domain, but we do not know yet what is
-the effectiveness when applied to affective-aware learing environments.   
+the effectiveness when applied to affective-aware learning environments.   
 
 %This
 % But you have to comment on how this addresses the problem. Which
@@ -999,7 +1004,11 @@ Future work will focus on extracting other features from the learners\' interact
 \cite{blikstein2011using}; the parameters proposed by this author
 include the size of the program and changes in the code. Other authors
 also propose treating the use of certain keys as features e.g., the
-delete key because it is mainly used for correcting sentences. Also a multi-modal approach is needed. Since all these need a completely new approach, a new methodology will be developed to
+delete key because it is mainly used for correcting sentences. Also a
+multi-modal approach is needed, using attention detectors alongside KD
+dynamics to measure at least the boredom/attention state independently
+of the verbal assessment by the student. Since all these need a
+completely new approach, a new methodology will be developed to 
 gather data and take measures.
 
 % use section* for acknowledgment
@@ -1008,7 +1017,7 @@ This work has been supported in part by: de Ministerio espa\~{n}ol de
 Econom\'{\i}a y Competitividad under project TIN2014-56494-C4-3-P
 (UGR-EPHEMECH),  DeepBio (TIN2017-85727-C4-2-P) and by CONACYT PEI Project No. 220590.
 
-\bibliographystyle{apalike}
+\bibliographystyle{splncs03}
 % argument is your BibTeX string definitions and bibliography database(s)
 \bibliography{programming}
 
