@@ -165,7 +165,7 @@ problem arises: Sensors which are not present in the default computer
 configuration must be used to gather data that will be used to perform the
 recognition of users\' affective states.
 Some sensors rely on physiological readings
-and must be in physical contact with students \cite{atkinson2017assessing,swansianalyzing}.
+and must be in physical contact with students \cite{kula2017assessing,swansianalyzing,gonzalez2017affect}.
 These sensors can be considered
 intrusive or invasive, not to mention that you have to acquire them
 and convince the student to wear them while learning.  They can also disrupt the student\'s learning experience
@@ -968,51 +968,58 @@ higher computational cost.
 
 \section{Conclusion}
 
-The aim of this research was to evaluate the use of keyboard and mouse
-dynamics (KD) as an appropriate sensory input for an affective
-recognition system for students of different levels learning to
-program, specifically carrying out assignments consisting in writing
+The aim of this research was to present an affective recognition
+system that uses keyboard and mouse
+dynamics (KD) as a non-intrusive sensory input. This system was
+applied to  for students of different levels learning to
+program by carrying out assignments consisting in writing
 short programs interactively. An experimental approach was adopted
-with this objective, by effectively using the method with real
-subjects using the environment and using KD measurements and survey
-responses as training data for several machine learning systems.
+with this objective, by effectively taking KD measurements on real
+subjects using the environment; these subjects they responded to
+surveys. Measurements and surveys were merged into a dataset that was
+used for training different machine learning system, with our
+objective being to find out which method yields the best results in
+this environment. 
 
-The proposed method in this work obtained
-satisfactory results. It is usual for a classification method based on free-text
+Results obtained with these machine learning systems show that the
+method used for gathering affective data convey sufficient information
+for an adequate classification of affective states; in fact, although
+it is usual for a classification method based on free-text
 to obtain an accuracy and $\kappa$ measure below their counterparts of
-fixed-text; however, in this
-work the results obtained were similar to those works that worked with fixed-text
-dynamics. A possible explanation of this would be the addition of the mouse
-dynamics features and the additional preprocessing performed on the
-feature vectors. Out of all methods tested, tree induction algorithms
+fixed-text; in this work the classification accuracy obtained  with
+the best machine learning systems were similar to those using
+fixed-text. This level of accuracy obtained beyond the state of the
+art in free-text systems might be due to the addition of
+the mouse dynamics features and the additional preprocessing performed on the
+feature vectors.
+
+With data captured and preprocessed as indicated in the methodology,
+and out of all the machine learning algorithms tested, tree induction algorithms
 obtained better results when we take into consideration both accuracy
 and $\kappa$ values. These methods, besides, are able to give us some
-insight on what are the KD features that effectively describe the
+insight on the key KD features that effectively describe the
 different affective states. 
 
 While these are promising results, further experiments are
-needed. Other experiments should focus on novice programmers, with
+needed. In this work we have used programmers with different levels of
+expertise; however, it would be interesting to focus on novice programmers, with
 which we expect to gather more data and more representative examples for all the
 classes. These experiments should give researchers the ability to do stratified samples to balance
-the class distribution and achieve better results. Also more experiments should
-give more insight on the relationship between affective state  and interactive
+the class distribution and achieve better results. Additional experiments should
+give more insight on the relationship between affective state and interactive
 behavior. Results show near 80\% accuracy, these results  are competitive
 against other classifiers of a similar domain, but we do not know yet what is
 the effectiveness when applied to affective-aware learning environments.   
 
-%This
-% But you have to comment on how this addresses the problem. Which
-% should be in the title that is not there yet - JJ
-% You also have to draw a _hard_ conclusion. Is programming using free
-% text better than what? Typing a fixed text?
-% Is 80% effective?
-%  - done  Mario 
-Future work will focus on extracting other features from the learners\' interaction such as behavioral data, as proposed by Blikstein
+A different line of work will focus on extracting other features from
+the learners\' interaction such as behavioral data, as proposed by
+Blikstein 
 \cite{blikstein2011using}; the parameters proposed by this author
 include the size of the program and changes in the code. Other authors
 also propose treating the use of certain keys as features e.g., the
 delete key because it is mainly used for correcting sentences. Also a
-multi-modal approach is needed, using attention detectors alongside KD
+multi-modal approach to the detection of the affective state might be
+needed, using attention detectors alongside KD 
 dynamics to measure at least the boredom/attention state independently
 of the verbal assessment by the student. Since all these need a
 completely new approach, a new methodology will be developed to 
